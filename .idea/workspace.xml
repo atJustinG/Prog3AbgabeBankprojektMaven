@@ -4,11 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91ebef08-8190-4211-8cff-986e267e4295" name="Changes" comment="" />
+    <list default="true" id="91ebef08-8190-4211-8cff-986e267e4295" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Bankprojekt/src/test/java/bankprojekt/verarbeitung/KontoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bankprojekt/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/verarbeitung/Konto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/verarbeitung/Konto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bankprojekt/target/classes/bankprojekt/verarbeitung/Konto.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/target/classes/bankprojekt/verarbeitung/Konto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bankprojekt/target/classes/bankprojekt/verarbeitung/Waehrung.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/target/classes/bankprojekt/verarbeitung/Waehrung.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bankprojekt/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bankprojekt/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -24,8 +40,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.KontenSpielereien.executor": "Run",
+    "JUnit.KontoTest.executor": "Run",
+    "JUnit.KontoTest.waehrungswechsel_vonEscudoaufEscudo.executor": "Run",
     "Maven.Bankprojekt [compile].executor": "Run",
+    "Maven.Bankprojekt [validate].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/justi/IdeaProjects/Prog3AbgabeBankprojektMaven/Bankprojekt/src/main/java/Bankprojekt",
     "project.structure.last.edited": "Project",
@@ -38,10 +60,55 @@
       <recent name="C:\Users\justi\IdeaProjects\Prog3AbgabeBankprojektMaven\Bankprojekt\src\main\java\Bankprojekt" />
       <recent name="C:\Users\justi\IdeaProjects\prog3AbgabeBankprojektMaven\Bankprojekt\src\main\java\TWH" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="bankprojekt.verarbeitung" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Bankprojekt" />
       <recent name="TWH" />
     </key>
+  </component>
+  <component name="RunManager" selected="JUnit.KontoTest.waehrungswechsel_vonEscudoaufEscudo">
+    <configuration name="KontoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Bankprojekt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bankprojekt.verarbeitung.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="bankprojekt.verarbeitung" />
+      <option name="MAIN_CLASS_NAME" value="bankprojekt.verarbeitung.KontoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KontoTest.waehrungswechsel_vonEscudoaufEscudo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Bankprojekt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bankprojekt.verarbeitung.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="bankprojekt.verarbeitung" />
+      <option name="MAIN_CLASS_NAME" value="bankprojekt.verarbeitung.KontoTest" />
+      <option name="METHOD_NAME" value="waehrungswechsel_vonEscudoaufEscudo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.KontoTest.waehrungswechsel_vonEscudoaufEscudo" />
+        <item itemvalue="JUnit.KontoTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

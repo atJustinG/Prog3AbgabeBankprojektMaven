@@ -21,13 +21,13 @@
    <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>
-      <version>5.11.0-M1</version>
+      <version>5.10.2</version>
       <scope>test</scope>
     </dependency>
    <dependency>
       <groupId>org.decimal4j</groupId>
       <artifactId>decimal4j</artifactId>
-      <version>1.0.1</version>
+      <version>1.0.3</version>
     </dependency>
     <dependency>
       <groupId>com.google.guava</groupId>
@@ -39,9 +39,46 @@
   <build>
     <plugins>
         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <version>3.6.3</version>
+            <configuration>
+                <show>protected</show>
+            </configuration>
+        </plugin>
+        <plugin>
             <groupId>org.jacoco</groupId>
             <artifactId>jacoco-maven-plugin</artifactId>
             <version>0.8.11</version>
+            <executions>
+                <execution>
+                    <id>default prepare_agent</id>
+                    <goals>
+                        <goal>
+                            prepare-agent
+                        </goal>
+                    </goals>
+                    <phase>
+                        validate
+                    </phase>
+                </execution>
+                <execution>
+                    <id>default report</id>
+                    <goals>
+                        <goal>
+                            report
+                        </goal>
+                    </goals>
+                    <phase>
+                        test
+                    </phase>
+                    <configuration>
+                        <includes>
+                            bankprojekt/verarbeitung/Konto.class
+                        </includes>
+                    </configuration>
+                </execution>
+            </executions>
         </plugin>
     </plugins>
   </build>

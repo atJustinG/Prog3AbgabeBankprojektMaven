@@ -257,19 +257,9 @@ public abstract class Konto implements Comparable<Konto>
 	 * @throws GesperrtException wirft die gesperrte exception
 	 */
 	public boolean abheben(double betrag, Waehrung w) throws GesperrtException{
-		if(w == waehrung){
-			return abheben(betrag);
-		}else if(w != Waehrung.EUR){
 			betrag = w.waehrungInEuroUmrechnen(betrag);
 			betrag = w.euroInWaehrungUmrechnen(betrag);
 			return abheben(betrag);
-
-		}else{
-			betrag = w.waehrungInEuroUmrechnen(betrag);
-			return abheben(betrag);
-
-		}
-
 	}
 
 	/**
@@ -278,18 +268,9 @@ public abstract class Konto implements Comparable<Konto>
 	 * @param w die angegebene Waehrung die eingezahlt werden soll
 	 */
 	public void einzahlen(double betrag, Waehrung w){
-		if(!isGesperrt()){
-			if(w == waehrung){
-				einzahlen(betrag);
-			}else if(w != Waehrung.EUR){
 				betrag = waehrung.waehrungInEuroUmrechnen(betrag);
 				betrag = w.euroInWaehrungUmrechnen(betrag);
 				einzahlen(betrag);
-			}else{
-				betrag = w.waehrungInEuroUmrechnen(betrag);
-				einzahlen(betrag);
-			}
-		}
 	}
 
 	/**
@@ -298,20 +279,15 @@ public abstract class Konto implements Comparable<Konto>
 	 * @param neu die gewuenschte neue Waehrung
 	 */
 	public void waehrungswechsel(Waehrung neu){
-		Waehrung tempWaehrung;
 		double tempKontostand = getKontostand();
 		if(waehrung == Waehrung.EUR){
 			tempKontostand = neu.euroInWaehrungUmrechnen(tempKontostand);
-		}else if(waehrung != Waehrung.EUR){
-			tempKontostand = waehrung.waehrungInEuroUmrechnen(tempKontostand);
-			tempKontostand = neu.euroInWaehrungUmrechnen(tempKontostand);
 		}else{
+			tempKontostand = waehrung.waehrungInEuroUmrechnen(tempKontostand);
 			tempKontostand = neu.euroInWaehrungUmrechnen(tempKontostand);
 		}
 		waehrung = neu;
 		setKontostand(tempKontostand);
 	}
-
-
 
 }
