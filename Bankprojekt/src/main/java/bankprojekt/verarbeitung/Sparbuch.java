@@ -76,8 +76,6 @@ public class Sparbuch extends Konto {
 		if (getKontostand() - betrag >= 0.50 && 
 				 bereitsAbgehoben + betrag <= Sparbuch.ABHEBESUMME)
 		{
-			Waehrung w = getAktuelleWaehrung();  //setzt die aktuelle Waehrung
-			betrag = w.euroInWaehrungUmrechnen(betrag); //rechnet den euro Betrag in die vom Konto angegebene Waehrung um
 			setKontostand(getKontostand() - betrag);
 			bereitsAbgehoben += betrag;
 			this.zeitpunkt = LocalDate.now();

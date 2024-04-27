@@ -257,9 +257,7 @@ public abstract class Konto implements Comparable<Konto>
 	 * @throws GesperrtException wirft die gesperrte exception
 	 */
 	public boolean abheben(double betrag, Waehrung w) throws GesperrtException{
-			betrag = w.waehrungInEuroUmrechnen(betrag);
-			betrag = w.euroInWaehrungUmrechnen(betrag);
-			return abheben(betrag);
+			return abheben(umrechnen(betrag, w));
 	}
 
 	/**
@@ -268,9 +266,7 @@ public abstract class Konto implements Comparable<Konto>
 	 * @param w die angegebene Waehrung die eingezahlt werden soll
 	 */
 	public void einzahlen(double betrag, Waehrung w){
-				betrag = waehrung.waehrungInEuroUmrechnen(betrag);
-				betrag = w.euroInWaehrungUmrechnen(betrag);
-				einzahlen(betrag);
+				einzahlen(umrechnen(betrag, w));
 	}
 
 	/**
@@ -288,6 +284,12 @@ public abstract class Konto implements Comparable<Konto>
 		}
 		waehrung = neu;
 		setKontostand(tempKontostand);
+	}
+
+	public double umrechnen(double betrag, Waehrung w){
+		betrag = w.waehrungInEuroUmrechnen(betrag);
+		betrag = waehrung.euroInWaehrungUmrechnen(betrag);
+		return betrag;
 	}
 
 }

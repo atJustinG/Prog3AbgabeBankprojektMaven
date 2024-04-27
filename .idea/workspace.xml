@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91ebef08-8190-4211-8cff-986e267e4295" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Bankprojekt/src/test/java/bankprojekt/verarbeitung/KontoTest.java" afterDir="false" />
+    <list default="true" id="91ebef08-8190-4211-8cff-986e267e4295" name="Changes" comment="gitignore added, erste Test geschrieben, Alle vorausgesetzten maven einstellungen abheben und einzahlen überarbeitet">
+      <change afterPath="$PROJECT_DIR$/Bankprojekt/src/test/java/bankprojekt/verarbeitung/SparbuchTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bankprojekt/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/verarbeitung/Konto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/verarbeitung/Konto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/verarbeitung/Sparbuch.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/verarbeitung/Sparbuch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bankprojekt/src/test/java/bankprojekt/verarbeitung/KontoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/src/test/java/bankprojekt/verarbeitung/GiroKontoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bankprojekt/target/classes/bankprojekt/verarbeitung/Konto.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/target/classes/bankprojekt/verarbeitung/Konto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bankprojekt/target/classes/bankprojekt/verarbeitung/Waehrung.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/target/classes/bankprojekt/verarbeitung/Waehrung.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bankprojekt/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bankprojekt/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bankprojekt/target/classes/bankprojekt/verarbeitung/Sparbuch.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/target/classes/bankprojekt/verarbeitung/Sparbuch.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,9 +40,22 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.KontenSpielereien.executor": "Run",
+    "JUnit.GiroKontoTest.abheben_andereWaehrungAlsEuro.executor": "Run",
+    "JUnit.GiroKontoTest.abheben_betragIstInfinite.executor": "Run",
+    "JUnit.GiroKontoTest.abheben_betragIstNaN.executor": "Run",
+    "JUnit.GiroKontoTest.abheben_betragKleinerNull.executor": "Run",
+    "JUnit.GiroKontoTest.abheben_dispoNichtUeberzogen.executor": "Run",
+    "JUnit.GiroKontoTest.abheben_dispoUeberzogen.executor": "Run",
+    "JUnit.GiroKontoTest.abheben_kontoIstGesperrt.executor": "Run",
     "JUnit.KontoTest.executor": "Run",
     "JUnit.KontoTest.waehrungswechsel_vonEscudoaufEscudo.executor": "Run",
+    "JUnit.SparbuchTest.abheben_KontostandIstUnter50Cent.executor": "Run",
+    "JUnit.SparbuchTest.abheben_andereWaehrungAlsEuro.executor": "Run",
+    "JUnit.SparbuchTest.abheben_betragGroesserAbhebesumme.executor": "Run",
+    "JUnit.SparbuchTest.abheben_betragKleinerGleichAbhebesumme.executor": "Run",
+    "JUnit.SparbuchTest.executor": "Run",
     "Maven.Bankprojekt [compile].executor": "Run",
+    "Maven.Bankprojekt [test].executor": "Run",
     "Maven.Bankprojekt [validate].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
@@ -71,8 +83,8 @@
       <recent name="TWH" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.KontoTest.waehrungswechsel_vonEscudoaufEscudo">
-    <configuration name="KontoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.SparbuchTest.abheben_andereWaehrungAlsEuro">
+    <configuration name="GiroKontoTest.abheben_andereWaehrungAlsEuro" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Bankprojekt" />
       <extension name="coverage">
         <pattern>
@@ -81,13 +93,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="bankprojekt.verarbeitung" />
-      <option name="MAIN_CLASS_NAME" value="bankprojekt.verarbeitung.KontoTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="bankprojekt.verarbeitung.GiroKontoTest" />
+      <option name="METHOD_NAME" value="abheben_andereWaehrungAlsEuro" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KontoTest.waehrungswechsel_vonEscudoaufEscudo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SparbuchTest.abheben_KontostandIstUnter50Cent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Bankprojekt" />
       <extension name="coverage">
         <pattern>
@@ -96,8 +109,56 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="bankprojekt.verarbeitung" />
-      <option name="MAIN_CLASS_NAME" value="bankprojekt.verarbeitung.KontoTest" />
-      <option name="METHOD_NAME" value="waehrungswechsel_vonEscudoaufEscudo" />
+      <option name="MAIN_CLASS_NAME" value="bankprojekt.verarbeitung.SparbuchTest" />
+      <option name="METHOD_NAME" value="abheben_KontostandIstUnter50Cent" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SparbuchTest.abheben_andereWaehrungAlsEuro" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Bankprojekt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bankprojekt.verarbeitung.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="bankprojekt.verarbeitung" />
+      <option name="MAIN_CLASS_NAME" value="bankprojekt.verarbeitung.SparbuchTest" />
+      <option name="METHOD_NAME" value="abheben_andereWaehrungAlsEuro" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SparbuchTest.abheben_betragGroesserAbhebesumme" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Bankprojekt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bankprojekt.verarbeitung.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="bankprojekt.verarbeitung" />
+      <option name="MAIN_CLASS_NAME" value="bankprojekt.verarbeitung.SparbuchTest" />
+      <option name="METHOD_NAME" value="abheben_betragGroesserAbhebesumme" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SparbuchTest.abheben_betragKleinerGleichAbhebesumme" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Bankprojekt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bankprojekt.verarbeitung.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="bankprojekt.verarbeitung" />
+      <option name="MAIN_CLASS_NAME" value="bankprojekt.verarbeitung.SparbuchTest" />
+      <option name="METHOD_NAME" value="abheben_betragKleinerGleichAbhebesumme" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -105,8 +166,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.KontoTest.waehrungswechsel_vonEscudoaufEscudo" />
-        <item itemvalue="JUnit.KontoTest" />
+        <item itemvalue="JUnit.SparbuchTest.abheben_andereWaehrungAlsEuro" />
+        <item itemvalue="JUnit.GiroKontoTest.abheben_andereWaehrungAlsEuro" />
+        <item itemvalue="JUnit.SparbuchTest.abheben_betragGroesserAbhebesumme" />
+        <item itemvalue="JUnit.SparbuchTest.abheben_betragKleinerGleichAbhebesumme" />
+        <item itemvalue="JUnit.SparbuchTest.abheben_KontostandIstUnter50Cent" />
       </list>
     </recent_temporary>
   </component>
@@ -119,6 +183,19 @@
       <option name="presentableId" value="Default" />
       <updated>1714054001270</updated>
     </task>
+    <task id="LOCAL-00001" summary="gitignore added, erste Test geschrieben, Alle vorausgesetzten maven einstellungen abheben und einzahlen überarbeitet">
+      <option name="closed" value="true" />
+      <created>1714239925221</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1714239925221</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="gitignore added, erste Test geschrieben, Alle vorausgesetzten maven einstellungen abheben und einzahlen überarbeitet" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitignore added, erste Test geschrieben, Alle vorausgesetzten maven einstellungen abheben und einzahlen überarbeitet" />
   </component>
 </project>
