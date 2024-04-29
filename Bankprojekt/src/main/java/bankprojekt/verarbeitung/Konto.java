@@ -286,6 +286,12 @@ public abstract class Konto implements Comparable<Konto>
 		setKontostand(tempKontostand);
 	}
 
+	/**
+	 * rechnet den angegebenen betrag zu einem Betrag der angegebenen Waehrung um
+	 * @param betrag umrechnender Betrag
+	 * @param w Waehrung die den umrechnungskurs angibtg
+	 * @return den neu gerechneten Betrag
+	 */
 	public double umrechnen(double betrag, Waehrung w){
 		betrag = w.waehrungInEuroUmrechnen(betrag);
 		betrag = waehrung.euroInWaehrungUmrechnen(betrag);

@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91ebef08-8190-4211-8cff-986e267e4295" name="Changes" comment="gitignore added, erste Test geschrieben, Alle vorausgesetzten maven einstellungen abheben und einzahlen überarbeitet">
-      <change afterPath="$PROJECT_DIR$/Bankprojekt/src/test/java/bankprojekt/verarbeitung/SparbuchTest.java" afterDir="false" />
+    <list default="true" id="91ebef08-8190-4211-8cff-986e267e4295" name="Changes" comment="testklassen für giroknto und sparbuch hinzugefügt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bankprojekt/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/verarbeitung/Konto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/verarbeitung/Konto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/verarbeitung/Sparbuch.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/verarbeitung/Sparbuch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bankprojekt/src/test/java/bankprojekt/verarbeitung/KontoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/src/test/java/bankprojekt/verarbeitung/GiroKontoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bankprojekt/target/classes/bankprojekt/verarbeitung/Konto.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/target/classes/bankprojekt/verarbeitung/Konto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bankprojekt/target/classes/bankprojekt/verarbeitung/Sparbuch.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/target/classes/bankprojekt/verarbeitung/Sparbuch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bankprojekt/src/test/java/bankprojekt/verarbeitung/GiroKontoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/src/test/java/bankprojekt/verarbeitung/GiroKontoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bankprojekt/src/test/java/bankprojekt/verarbeitung/SparbuchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/src/test/java/bankprojekt/verarbeitung/SparbuchTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,36 +35,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.KontenSpielereien.executor": "Run",
-    "JUnit.GiroKontoTest.abheben_andereWaehrungAlsEuro.executor": "Run",
-    "JUnit.GiroKontoTest.abheben_betragIstInfinite.executor": "Run",
-    "JUnit.GiroKontoTest.abheben_betragIstNaN.executor": "Run",
-    "JUnit.GiroKontoTest.abheben_betragKleinerNull.executor": "Run",
-    "JUnit.GiroKontoTest.abheben_dispoNichtUeberzogen.executor": "Run",
-    "JUnit.GiroKontoTest.abheben_dispoUeberzogen.executor": "Run",
-    "JUnit.GiroKontoTest.abheben_kontoIstGesperrt.executor": "Run",
-    "JUnit.KontoTest.executor": "Run",
-    "JUnit.KontoTest.waehrungswechsel_vonEscudoaufEscudo.executor": "Run",
-    "JUnit.SparbuchTest.abheben_KontostandIstUnter50Cent.executor": "Run",
-    "JUnit.SparbuchTest.abheben_andereWaehrungAlsEuro.executor": "Run",
-    "JUnit.SparbuchTest.abheben_betragGroesserAbhebesumme.executor": "Run",
-    "JUnit.SparbuchTest.abheben_betragKleinerGleichAbhebesumme.executor": "Run",
-    "JUnit.SparbuchTest.executor": "Run",
-    "Maven.Bankprojekt [compile].executor": "Run",
-    "Maven.Bankprojekt [test].executor": "Run",
-    "Maven.Bankprojekt [validate].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/justi/IdeaProjects/Prog3AbgabeBankprojektMaven/Bankprojekt/src/main/java/Bankprojekt",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.KontenSpielereien.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GiroKontoTest.abheben_andereWaehrungAlsEuro.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GiroKontoTest.abheben_betragIstInfinite.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GiroKontoTest.abheben_betragIstNaN.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GiroKontoTest.abheben_betragKleinerNull.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GiroKontoTest.abheben_dispoNichtUeberzogen.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GiroKontoTest.abheben_dispoUeberzogen.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GiroKontoTest.abheben_kontoIstGesperrt.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.KontoTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.KontoTest.waehrungswechsel_vonEscudoaufEscudo.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SparbuchTest.abheben_KontostandIstUnter50Cent.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SparbuchTest.abheben_andereWaehrungAlsEuro.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SparbuchTest.abheben_betragGroesserAbhebesumme.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SparbuchTest.abheben_betragKleinerGleichAbhebesumme.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SparbuchTest.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Bankprojekt [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Bankprojekt [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Bankprojekt [test].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Bankprojekt [validate].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/justi/IdeaProjects/Prog3AbgabeBankprojektMaven/Bankprojekt/src/main/java/Bankprojekt&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\justi\IdeaProjects\Prog3AbgabeBankprojektMaven\Bankprojekt\src\main\java\Bankprojekt" />
@@ -191,11 +190,20 @@
       <option name="project" value="LOCAL" />
       <updated>1714239925221</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="testklassen für giroknto und sparbuch hinzugefügt">
+      <option name="closed" value="true" />
+      <created>1714251816364</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714251816364</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="gitignore added, erste Test geschrieben, Alle vorausgesetzten maven einstellungen abheben und einzahlen überarbeitet" />
-    <option name="LAST_COMMIT_MESSAGE" value="gitignore added, erste Test geschrieben, Alle vorausgesetzten maven einstellungen abheben und einzahlen überarbeitet" />
+    <MESSAGE value="testklassen für giroknto und sparbuch hinzugefügt" />
+    <option name="LAST_COMMIT_MESSAGE" value="testklassen für giroknto und sparbuch hinzugefügt" />
   </component>
 </project>

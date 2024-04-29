@@ -43,8 +43,21 @@
             <artifactId>maven-javadoc-plugin</artifactId>
             <version>3.6.3</version>
             <configuration>
-                <show>protected</show>
+                <show>package</show>
             </configuration>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>
+                            javadoc
+                        </goal>
+                        <goal>
+                            test-javadoc
+                        </goal>
+                    </goals>
+                    <phase>package</phase>
+                </execution>
+            </executions>
         </plugin>
         <plugin>
             <groupId>org.jacoco</groupId>
