@@ -265,7 +265,7 @@ public abstract class Konto implements Comparable<Konto>
 	 * @param betrag der einzuzahlende Betrag
 	 * @param w die angegebene Waehrung die eingezahlt werden soll
 	 */
-	public void einzahlen(double betrag, Waehrung w){
+	public void einzahlen(double betrag, Waehrung w) {
 				einzahlen(umrechnen(betrag, w));
 	}
 
@@ -292,10 +292,10 @@ public abstract class Konto implements Comparable<Konto>
 	 * @param w Waehrung die den umrechnungskurs angibtg
 	 * @return den neu gerechneten Betrag
 	 */
-	public double umrechnen(double betrag, Waehrung w){
-		betrag = w.waehrungInEuroUmrechnen(betrag);
-		betrag = waehrung.euroInWaehrungUmrechnen(betrag);
-		return betrag;
+	public double umrechnen(double betrag, Waehrung w) {
+			betrag = w.waehrungInEuroUmrechnen(betrag);
+			betrag = waehrung.euroInWaehrungUmrechnen(betrag);
+			return betrag;
 	}
 
 }
