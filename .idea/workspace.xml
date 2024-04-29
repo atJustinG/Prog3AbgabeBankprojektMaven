@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91ebef08-8190-4211-8cff-986e267e4295" name="Changes" comment="testklassen für giroknto und sparbuch hinzugefügt">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bankprojekt/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/pom.xml" afterDir="false" />
+    <list default="true" id="91ebef08-8190-4211-8cff-986e267e4295" name="Changes" comment="testklassen Kommentiert">
       <change beforePath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/verarbeitung/Konto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/verarbeitung/Konto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bankprojekt/src/test/java/bankprojekt/verarbeitung/GiroKontoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/src/test/java/bankprojekt/verarbeitung/GiroKontoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bankprojekt/src/test/java/bankprojekt/verarbeitung/SparbuchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/src/test/java/bankprojekt/verarbeitung/SparbuchTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,12 +194,21 @@
       <option name="project" value="LOCAL" />
       <updated>1714251816364</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="testklassen Kommentiert">
+      <option name="closed" value="true" />
+      <created>1714424281041</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714424281041</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="gitignore added, erste Test geschrieben, Alle vorausgesetzten maven einstellungen abheben und einzahlen überarbeitet" />
     <MESSAGE value="testklassen für giroknto und sparbuch hinzugefügt" />
-    <option name="LAST_COMMIT_MESSAGE" value="testklassen für giroknto und sparbuch hinzugefügt" />
+    <MESSAGE value="testklassen Kommentiert" />
+    <option name="LAST_COMMIT_MESSAGE" value="testklassen Kommentiert" />
   </component>
 </project>
