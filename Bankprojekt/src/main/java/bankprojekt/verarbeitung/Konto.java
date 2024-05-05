@@ -266,7 +266,7 @@ public abstract class Konto implements Comparable<Konto>
 	 * @param w die angegebene Waehrung die eingezahlt werden soll
 	 */
 	public void einzahlen(double betrag, Waehrung w) {
-				einzahlen(umrechnen(betrag, w));
+		einzahlen(umrechnen(betrag, w));
 	}
 
 	/**

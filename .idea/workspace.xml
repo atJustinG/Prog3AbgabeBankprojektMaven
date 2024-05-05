@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91ebef08-8190-4211-8cff-986e267e4295" name="Changes" comment="testklassen Kommentiert">
+    <list default="true" id="91ebef08-8190-4211-8cff-986e267e4295" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/verarbeitung/Bank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/verarbeitung/Konto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/verarbeitung/Konto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bankprojekt/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +18,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -31,143 +34,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.KontenSpielereien.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GiroKontoTest.abheben_andereWaehrungAlsEuro.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GiroKontoTest.abheben_betragIstInfinite.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GiroKontoTest.abheben_betragIstNaN.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GiroKontoTest.abheben_betragKleinerNull.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GiroKontoTest.abheben_dispoNichtUeberzogen.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GiroKontoTest.abheben_dispoUeberzogen.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.GiroKontoTest.abheben_kontoIstGesperrt.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.KontoTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.KontoTest.waehrungswechsel_vonEscudoaufEscudo.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.SparbuchTest.abheben_KontostandIstUnter50Cent.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.SparbuchTest.abheben_andereWaehrungAlsEuro.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.SparbuchTest.abheben_betragGroesserAbhebesumme.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.SparbuchTest.abheben_betragKleinerGleichAbhebesumme.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.SparbuchTest.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Bankprojekt [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Bankprojekt [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Bankprojekt [test].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Bankprojekt [validate].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/justi/IdeaProjects/Prog3AbgabeBankprojektMaven/Bankprojekt/src/main/java/Bankprojekt&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.KontenSpielereien.executor": "Run",
+    "Maven.Bankprojekt [compile].executor": "Run",
+    "Maven.Bankprojekt [verify].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/justi/IdeaProjects/Prog3AbgabeBankprojektMaven/Bankprojekt/src/main/java/Bankprojekt",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\justi\IdeaProjects\Prog3AbgabeBankprojektMaven\Bankprojekt\src\main\java\Bankprojekt" />
       <recent name="C:\Users\justi\IdeaProjects\prog3AbgabeBankprojektMaven\Bankprojekt\src\main\java\TWH" />
     </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="bankprojekt.verarbeitung" />
-    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Bankprojekt" />
       <recent name="TWH" />
     </key>
-  </component>
-  <component name="RunManager" selected="JUnit.SparbuchTest.abheben_andereWaehrungAlsEuro">
-    <configuration name="GiroKontoTest.abheben_andereWaehrungAlsEuro" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Bankprojekt" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="bankprojekt.verarbeitung.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="bankprojekt.verarbeitung" />
-      <option name="MAIN_CLASS_NAME" value="bankprojekt.verarbeitung.GiroKontoTest" />
-      <option name="METHOD_NAME" value="abheben_andereWaehrungAlsEuro" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SparbuchTest.abheben_KontostandIstUnter50Cent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Bankprojekt" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="bankprojekt.verarbeitung.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="bankprojekt.verarbeitung" />
-      <option name="MAIN_CLASS_NAME" value="bankprojekt.verarbeitung.SparbuchTest" />
-      <option name="METHOD_NAME" value="abheben_KontostandIstUnter50Cent" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SparbuchTest.abheben_andereWaehrungAlsEuro" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Bankprojekt" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="bankprojekt.verarbeitung.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="bankprojekt.verarbeitung" />
-      <option name="MAIN_CLASS_NAME" value="bankprojekt.verarbeitung.SparbuchTest" />
-      <option name="METHOD_NAME" value="abheben_andereWaehrungAlsEuro" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SparbuchTest.abheben_betragGroesserAbhebesumme" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Bankprojekt" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="bankprojekt.verarbeitung.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="bankprojekt.verarbeitung" />
-      <option name="MAIN_CLASS_NAME" value="bankprojekt.verarbeitung.SparbuchTest" />
-      <option name="METHOD_NAME" value="abheben_betragGroesserAbhebesumme" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SparbuchTest.abheben_betragKleinerGleichAbhebesumme" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Bankprojekt" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="bankprojekt.verarbeitung.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="bankprojekt.verarbeitung" />
-      <option name="MAIN_CLASS_NAME" value="bankprojekt.verarbeitung.SparbuchTest" />
-      <option name="METHOD_NAME" value="abheben_betragKleinerGleichAbhebesumme" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.SparbuchTest.abheben_andereWaehrungAlsEuro" />
-        <item itemvalue="JUnit.GiroKontoTest.abheben_andereWaehrungAlsEuro" />
-        <item itemvalue="JUnit.SparbuchTest.abheben_betragGroesserAbhebesumme" />
-        <item itemvalue="JUnit.SparbuchTest.abheben_betragKleinerGleichAbhebesumme" />
-        <item itemvalue="JUnit.SparbuchTest.abheben_KontostandIstUnter50Cent" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -178,37 +66,6 @@
       <option name="presentableId" value="Default" />
       <updated>1714054001270</updated>
     </task>
-    <task id="LOCAL-00001" summary="gitignore added, erste Test geschrieben, Alle vorausgesetzten maven einstellungen abheben und einzahlen überarbeitet">
-      <option name="closed" value="true" />
-      <created>1714239925221</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1714239925221</updated>
-    </task>
-    <task id="LOCAL-00002" summary="testklassen für giroknto und sparbuch hinzugefügt">
-      <option name="closed" value="true" />
-      <created>1714251816364</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1714251816364</updated>
-    </task>
-    <task id="LOCAL-00003" summary="testklassen Kommentiert">
-      <option name="closed" value="true" />
-      <created>1714424281041</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1714424281041</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="gitignore added, erste Test geschrieben, Alle vorausgesetzten maven einstellungen abheben und einzahlen überarbeitet" />
-    <MESSAGE value="testklassen für giroknto und sparbuch hinzugefügt" />
-    <MESSAGE value="testklassen Kommentiert" />
-    <option name="LAST_COMMIT_MESSAGE" value="testklassen Kommentiert" />
   </component>
 </project>
