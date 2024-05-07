@@ -130,6 +130,21 @@ public class Bank {
     }
 
     /**
+     * loescht das mit der Nummer angegebene Konto die Kontonummer des Kontos wird nicht wieder freigegeben
+     * gibt sicher das alle Konten eine eigene erstellte Kontonummer haben.
+     * @param nummer Kontonummer des Kontos
+     * @return gibt true bei erfolgreichem loeschen zurueck und false wenn das Konto nicht existiert
+     */
+    public boolean kontoLoeschen(long nummer){
+        if(giroKonten.get(nummer) != null){
+            giroKonten.remove(nummer);
+            return true;
+        }else if(sparbuchKonten.get(nummer) != null){
+            sparbuchKonten.remove(nummer);
+            return true;
+        }else return false;
+    }
+    /**
      * gibt den aktuellen Kontostand des spezifizierten Kontos zurück
      * @param nummer Kontonummer des Kontos
      * @return den aktuellen Kontostand oder NaN bei einer falschen oder unbekannten kontonummer
