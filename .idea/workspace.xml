@@ -7,6 +7,8 @@
     <list default="true" id="91ebef08-8190-4211-8cff-986e267e4295" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/verarbeitung/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/verarbeitung/Bank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bankprojekt/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bankprojekt/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +38,7 @@
   &quot;keyToString&quot;: {
     &quot;Application.KontenSpielereien.executor&quot;: &quot;Run&quot;,
     &quot;Maven.Bankprojekt [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Bankprojekt [package].executor&quot;: &quot;Run&quot;,
     &quot;Maven.Bankprojekt [verify].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,

@@ -10,10 +10,10 @@ public class Bank {
 
     private long bankleitzahl;
 
-    long Kontonummer = 0;
+    private long kontonummer = 0;
 
-    HashMap<Long, Konto> giroKonten = new HashMap<Long,Konto>();
-    HashMap<Long, Konto> sparbuchKonten = new HashMap<Long, Konto>();
+    private HashMap<Long, Konto> giroKonten = new HashMap<Long,Konto>();
+    private HashMap<Long, Konto> sparbuchKonten = new HashMap<Long, Konto>();
 
     public Bank(long bankleitzahl){
         this.bankleitzahl = bankleitzahl;
@@ -24,34 +24,34 @@ public class Bank {
     }
 
     public long girokontoErstellen(Kunde inhaber){
-            giroKonten.put(Kontonummer, new Girokonto(inhaber, Kontonummer, 500));
-            Kontonummer++;
-            return Kontonummer;
+            kontonummer++;
+            giroKonten.put(kontonummer, new Girokonto(inhaber, kontonummer, 500));
+            return kontonummer;
     }
 
     public long sparbucherstellen(Kunde inhaber){
-        sparbuchKonten.put(Kontonummer, new Sparbuch(inhaber, Kontonummer));
-        Kontonummer++;
-        return Kontonummer;
+            kontonummer++;
+            sparbuchKonten.put(kontonummer, new Sparbuch(inhaber, kontonummer));
+            return kontonummer;
     }
 
     public String getAlleKonten(){
         String kontonummern = "";
         long tempKontonummer;
         double tempKontostand;
-        kontonummern = "Girokontos:\n";
+        kontonummern = "Girokontos:" + System.lineSeparator();
         for(Map.Entry<Long, Konto> entry: giroKonten.entrySet()){
             tempKontonummer = entry.getKey();
             tempKontostand =  entry.getValue().getKontostand();
-            kontonummern += "Konto: " + tempKontonummer + "\n";
-            kontonummern += "Kontostand: " + tempKontostand + "\n";
+            kontonummern += "Konto: " + tempKontonummer + System.lineSeparator();
+            kontonummern += "Kontostand: " + tempKontostand + System.lineSeparator();
         }
-        kontonummern = "Sparebuecher:\n";
+        kontonummern = "Sparebuecher:" + System.lineSeparator();
         for(Map.Entry<Long, Konto> entry: sparbuchKonten.entrySet()){
             tempKontonummer = entry.getKey();
             tempKontostand = entry.getValue().getKontostand();
-            kontonummern += "Konto: " + tempKontonummer + "\n";
-            kontonummern += "Kontostand: " + tempKontostand + "\n";
+            kontonummern += "Konto: " + tempKontonummer + System.lineSeparator();
+            kontonummern += "Kontostand: " + tempKontostand + System.lineSeparator();
 
         }
         return kontonummern;
@@ -95,12 +95,16 @@ public class Bank {
 
     public boolean geldUeberweisen(long vonKontonr, long nachKontonr, double betrag, String verwendungszweck) throws GesperrtException {
         if(giroKonten.get(vonKontonr) != null && giroKonten.get(nachKontonr) != null){
-            Girokonto giroKontoVon = (Girokonto) giroKonten.get(vonKontonr);
-            Girokonto giroKontoZu = (Girokonto) giroKonten.get(nachKontonr);
-            giroKontoVon.ueberweisungAbsenden(betrag, giroKontoZu.getInhaber().toString(), giroKontoZu.getKontonummer(), bankleitzahl, verwendungszweck);
-            giroKontoZu.ueberweisungEmpfangen(betrag, giroKontoVon.getInhaber().getNachname(), giroKontoVon.getKontonummer(), bankleitzahl, verwendungszweck);
-            return true;
+            UeberweisungsfaehigesKonto giroKontoVon = (UeberweisungsfaehigesKonto) giroKonten.get(vonKontonr);
+            UeberweisungsfaehigesKonto giroKontoZu = (UeberweisungsfaehigesKonto) giroKonten.get(nachKontonr);
+            if(!giroKontoVon.ueberweisungAbsenden(betrag, giroKontoZu.getInhaber().getNachname(),
+                    giroKontoZu.getKontonummer(), bankleitzahl, verwendungszweck)) {
+                    return false;
+            }else{
+                giroKontoZu.ueberweisungEmpfangen(betrag, giroKontoVon.getInhaber().getNachname(), giroKontoVon.getKontonummer(), bankleitzahl, verwendungszweck);
+                return true;
+            }
         }
-            return false;
+        return false;
     }
 }
