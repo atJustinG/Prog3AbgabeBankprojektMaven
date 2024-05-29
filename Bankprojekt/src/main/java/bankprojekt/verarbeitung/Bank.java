@@ -59,10 +59,15 @@ public class Bank {
             return kontonummer;
     }
 
+    /**
+     * simple Methode um mock Konten in die Bank einzufuegen
+     * @param k das mock Konto
+     * @return die Kontonummer des mock Kontos
+     */
     public long mockEinfuegen(Konto k){
-        kontonummer++;
-        konten.put(kontonummer, k);
-        return kontonummer;
+        long tempKontonummer = k.getKontonummer();
+        konten.put(tempKontonummer, k);
+        return tempKontonummer;
     }
 
     /**
@@ -145,25 +150,32 @@ public class Bank {
         return Double.NaN;
     }
 
+    public Konto getKonto(long kontonummer){
+        if(konten.get(kontonummer) != null){
+            return konten.get(kontonummer);
+        }else return null;
+    }
     /**
      * ueberweist einen Betrag von einem Konto auf ein anderes innerhalb der Bank
      * @param vonKontonr Kontonummer des sendeden Kontos
      * @param nachKontonr Kontonummer des empfangenden Kontos
      * @param betrag Betrag der ueberwiesen werden soll
      * @param verwendungszweck Verwendungszweck der Ueberweisung
-     * @return true bei durchgefuehrter Ueberweisung false wenn die Konten nicht existieren
+     * @return true bei durchgefuehrter Ueberweisung false wenn die Konten nicht existieren oder das zweite Konto ein Sparbuch ist
      * @throws GesperrtException wird geworfen wenn ein Konto gesperrt ist
      */
     public boolean geldUeberweisen(long vonKontonr, long nachKontonr, double betrag, String verwendungszweck) throws GesperrtException {
         if(konten.get(vonKontonr) != null && konten.get(nachKontonr) != null){
-            UeberweisungsfaehigesKonto giroKontoVon = (UeberweisungsfaehigesKonto) konten.get(vonKontonr);
-            UeberweisungsfaehigesKonto giroKontoZu = (UeberweisungsfaehigesKonto) konten.get(nachKontonr);
-            if(!giroKontoVon.ueberweisungAbsenden(betrag, giroKontoZu.getInhaber().getNachname(),
-                    giroKontoZu.getKontonummer(), bankleitzahl, verwendungszweck)) {
+            if(konten.get(vonKontonr) instanceof Girokonto && konten.get(nachKontonr) instanceof Girokonto){
+                UeberweisungsfaehigesKonto giroKontoVon = (UeberweisungsfaehigesKonto) konten.get(vonKontonr);
+                UeberweisungsfaehigesKonto giroKontoZu = (UeberweisungsfaehigesKonto) konten.get(nachKontonr);
+                if(!giroKontoVon.ueberweisungAbsenden(betrag, giroKontoZu.getInhaber().getNachname(),
+                        giroKontoZu.getKontonummer(), bankleitzahl, verwendungszweck)) {
                     return false;
-            }else{
-                giroKontoZu.ueberweisungEmpfangen(betrag, giroKontoVon.getInhaber().getNachname(), giroKontoVon.getKontonummer(), bankleitzahl, verwendungszweck);
-                return true;
+                }else{
+                    giroKontoZu.ueberweisungEmpfangen(betrag, giroKontoVon.getInhaber().getNachname(), giroKontoVon.getKontonummer(), bankleitzahl, verwendungszweck);
+                    return true;
+                }
             }
         }
         return false;
