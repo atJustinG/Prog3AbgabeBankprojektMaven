@@ -7,7 +7,10 @@ import org.decimal4j.util.DoubleRounder;
  */
 public enum Waehrung {
 
-    EUR(1), Escudo(109.8269), DOBRA(24304.7429), FRANC(490.92);
+    /**
+     * enums von Waehrungen die den Wechselkurs zum Euro angegeben haben
+     */
+    EUR(1), ESCUDO(109.8269), DOBRA(24304.7429), FRANC(490.92);
 
     /**
      * einfacher Konstruktor

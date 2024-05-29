@@ -14,7 +14,7 @@ public class KontenSpielereien {
 	/**
 	 * Testprogramm für Konten
 	 * @param args wird nicht benutzt
-	 * @throws GesperrtException
+	 * @throws GesperrtException wirft Gesperrt Exception wenn Konto gesperrt ist
 	 */
 	public static void main(String[] args) throws GesperrtException {
 		

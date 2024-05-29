@@ -1,7 +1,6 @@
 bankprojekt\verarbeitung\Bank.class
 bankprojekt\verarbeitung\Kunde$Zerstoerer.class
 bankprojekt\verarbeitung\Waehrung.class
-bankprojekt\App.class
 bankprojekt\verarbeitung\Kunde.class
 bankprojekt\verarbeitung\Sparbuch.class
 bankprojekt\verarbeitung\Girokonto.class

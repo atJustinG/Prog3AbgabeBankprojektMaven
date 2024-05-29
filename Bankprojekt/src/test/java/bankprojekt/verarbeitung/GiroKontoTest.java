@@ -45,8 +45,8 @@ class GiroKontoTest {
      */
     @Test
     void waehrungswechsel_vonEuroAufAndereWaehrung_dannAndereWaehrung(){
-        konto1.waehrungswechsel(Waehrung.Escudo);
-        assertEquals(Waehrung.Escudo, konto1.getAktuelleWaehrung());
+        konto1.waehrungswechsel(Waehrung.ESCUDO);
+        assertEquals(Waehrung.ESCUDO, konto1.getAktuelleWaehrung());
         assertEquals(10982.69, konto1.getKontostand());
     }
 
@@ -56,7 +56,7 @@ class GiroKontoTest {
     @Test
     void waehrungswechsel_vonEscudoAufEuro_dannEuro(){
         konto1.setKontostand(0);
-        konto1.waehrungswechsel(Waehrung.Escudo);
+        konto1.waehrungswechsel(Waehrung.ESCUDO);
         konto1.setKontostand(10982.69);
         konto1.waehrungswechsel(Waehrung.EUR);
         assertEquals(Waehrung.EUR, konto1.getAktuelleWaehrung());
@@ -69,10 +69,10 @@ class GiroKontoTest {
     @Test
     void waehrungswechsel_vonEscudoaufEscudo(){
         konto1.setKontostand(0);
-        konto1.waehrungswechsel(Waehrung.Escudo);
+        konto1.waehrungswechsel(Waehrung.ESCUDO);
         konto1.setKontostand(10982.69);
-        konto1.waehrungswechsel(Waehrung.Escudo);
-        assertEquals(Waehrung.Escudo, konto1.getAktuelleWaehrung());
+        konto1.waehrungswechsel(Waehrung.ESCUDO);
+        assertEquals(Waehrung.ESCUDO, konto1.getAktuelleWaehrung());
         assertEquals(10982.69, konto1.getKontostand());
     }
 
@@ -155,7 +155,7 @@ class GiroKontoTest {
      */
     @Test
     void abheben_andereWaehrungAlsEuro() throws GesperrtException{
-        konto1.abheben(10982.69, Waehrung.Escudo);
+        konto1.abheben(10982.69, Waehrung.ESCUDO);
           assertEquals(0, konto1.getKontostand());
     }
 

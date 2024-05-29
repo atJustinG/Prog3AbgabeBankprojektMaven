@@ -10,6 +10,9 @@ import org.mockito.*;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.*;
 
+/**
+ * Klasse zum testen
+ */
 class BankTest {
 
     Bank bank;
