@@ -166,7 +166,7 @@ public class Bank {
      */
     public boolean geldUeberweisen(long vonKontonr, long nachKontonr, double betrag, String verwendungszweck) throws GesperrtException {
         if(konten.get(vonKontonr) != null && konten.get(nachKontonr) != null){
-            if(konten.get(vonKontonr) instanceof Girokonto && konten.get(nachKontonr) instanceof Girokonto){
+            if(konten.get(vonKontonr) instanceof UeberweisungsfaehigesKonto && konten.get(nachKontonr) instanceof UeberweisungsfaehigesKonto){
                 UeberweisungsfaehigesKonto giroKontoVon = (UeberweisungsfaehigesKonto) konten.get(vonKontonr);
                 UeberweisungsfaehigesKonto giroKontoZu = (UeberweisungsfaehigesKonto) konten.get(nachKontonr);
                 if(!giroKontoVon.ueberweisungAbsenden(betrag, giroKontoZu.getInhaber().getNachname(),

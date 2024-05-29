@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91ebef08-8190-4211-8cff-986e267e4295" name="Changes" comment="mocks added TODO: tests">
+    <list default="true" id="91ebef08-8190-4211-8cff-986e267e4295" name="Changes" comment="tests cases and comments added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bankprojekt/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/verarbeitung/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/verarbeitung/Bank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/verarbeitung/Waehrung.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/verarbeitung/Waehrung.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bankprojekt/src/test/java/bankprojekt/verarbeitung/BankTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/src/test/java/bankprojekt/verarbeitung/BankTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bankprojekt/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bankprojekt/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bankprojekt/target/classes/bankprojekt/verarbeitung/Waehrung.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/target/classes/bankprojekt/verarbeitung/Waehrung.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +48,7 @@
     "JUnit.BankTest.GeldUeberweisenWennKontoZUSparbuchDannFalse.executor": "Run",
     "JUnit.BankTest.executor": "Run",
     "JUnit.BankTest.geldUeberweisenWennGirokontoNichtGedecktDannFalse.executor": "Run",
-    "JUnit.BankTest.geldUeberweisenWennGirokontoVonExistiertNichtInListeDannFalse.executor": "Run",
+    "JUnit.BankTest.geldUeberweisenWennGirokontoVonExistiertNichtInListeDannFalse.executor": "Debug",
     "JUnit.BankTest.geldUeberweisenWennKontoGesperrtDannException.executor": "Run",
     "JUnit.BankTest.geldUeberweisenWennKontoIstGesperrt.executor": "Run",
     "JUnit.BankTest.geldUeberweisenWennKontoVonGedecktAufSparbuchDannTrue.executor": "Run",
@@ -57,7 +56,7 @@
     "JUnit.BankTest.geldUeberweisenWennKontoZuHatKontostandDannEqualsValue.executor": "Run",
     "JUnit.BankTest.kontoLoeschenWennKontoBereitsGeloeschtDannFalse.executor": "Run",
     "JUnit.BankTest.kontoLoeschenWennNummerNichtInListeDannFalse.executor": "Run",
-    "JUnit.BankTest.kontoLoeschenWennNummerNichtNullDannTrue.executor": "Debug",
+    "JUnit.BankTest.kontoLoeschenWennNummerNichtNullDannTrue.executor": "Run",
     "JUnit.GiroKontoTest.executor": "Run",
     "JUnit.SparbuchTest.executor": "Run",
     "Maven.Bankprojekt [compile].executor": "Run",
@@ -69,7 +68,7 @@
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/justi/IdeaProjects/Prog3AbgabeBankprojektMaven/Bankprojekt/src/main/java/Bankprojekt",
     "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
@@ -89,7 +88,7 @@
       <recent name="TWH" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BankTest.geldUeberweisenWennKontoIstGesperrt">
+  <component name="RunManager" selected="JUnit.BankTest">
     <configuration name="BankTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Bankprojekt" />
       <extension name="coverage">
@@ -105,7 +104,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BankTest.GeldUeberweisenWennKontoZUSparbuchDannFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BankTest.geldUeberweisenWennGirokontoVonExistiertNichtInListeDannFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Bankprojekt" />
       <extension name="coverage">
         <pattern>
@@ -115,7 +114,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="bankprojekt.verarbeitung" />
       <option name="MAIN_CLASS_NAME" value="bankprojekt.verarbeitung.BankTest" />
-      <option name="METHOD_NAME" value="GeldUeberweisenWennKontoZUSparbuchDannFalse" />
+      <option name="METHOD_NAME" value="geldUeberweisenWennGirokontoVonExistiertNichtInListeDannFalse" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -137,7 +136,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BankTest.geldUeberweisenWennKontoVonGedecktAufSparbuchDannTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BankTest.geldUeberweisenWennKontoVonGedecktDannTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Bankprojekt" />
       <extension name="coverage">
         <pattern>
@@ -147,13 +146,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="bankprojekt.verarbeitung" />
       <option name="MAIN_CLASS_NAME" value="bankprojekt.verarbeitung.BankTest" />
-      <option name="METHOD_NAME" value="geldUeberweisenWennKontoVonGedecktAufSparbuchDannTrue" />
+      <option name="METHOD_NAME" value="geldUeberweisenWennKontoVonGedecktDannTrue" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BankTest.kontoLoeschenWennNummerNichtInListeDannFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BankTest.geldUeberweisenWennKontoZuHatKontostandDannEqualsValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Bankprojekt" />
       <extension name="coverage">
         <pattern>
@@ -163,7 +162,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="bankprojekt.verarbeitung" />
       <option name="MAIN_CLASS_NAME" value="bankprojekt.verarbeitung.BankTest" />
-      <option name="METHOD_NAME" value="kontoLoeschenWennNummerNichtInListeDannFalse" />
+      <option name="METHOD_NAME" value="geldUeberweisenWennKontoZuHatKontostandDannEqualsValue" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -171,11 +170,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BankTest.geldUeberweisenWennKontoIstGesperrt" />
-        <item itemvalue="JUnit.BankTest.kontoLoeschenWennNummerNichtInListeDannFalse" />
         <item itemvalue="JUnit.BankTest" />
-        <item itemvalue="JUnit.BankTest.GeldUeberweisenWennKontoZUSparbuchDannFalse" />
-        <item itemvalue="JUnit.BankTest.geldUeberweisenWennKontoVonGedecktAufSparbuchDannTrue" />
+        <item itemvalue="JUnit.BankTest.geldUeberweisenWennKontoIstGesperrt" />
+        <item itemvalue="JUnit.BankTest.geldUeberweisenWennKontoZuHatKontostandDannEqualsValue" />
+        <item itemvalue="JUnit.BankTest.geldUeberweisenWennKontoVonGedecktDannTrue" />
+        <item itemvalue="JUnit.BankTest.geldUeberweisenWennGirokontoVonExistiertNichtInListeDannFalse" />
       </list>
     </recent_temporary>
   </component>
@@ -212,7 +211,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716906951541</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="tests cases and comments added">
+      <option name="closed" value="true" />
+      <created>1716997063576</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1716997063576</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -229,6 +236,12 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="comments added" />
     <MESSAGE value="mocks added TODO: tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="mocks added TODO: tests" />
+    <MESSAGE value="tests cases and comments added" />
+    <option name="LAST_COMMIT_MESSAGE" value="tests cases and comments added" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Prog3AbgabeBankprojektMaven$BankTest.ic" NAME="BankTest Coverage Results" MODIFIED="1717002887566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>bankprojekt.verarbeitung.*</FILTER>
+    </SUITE>
   </component>
 </project>
