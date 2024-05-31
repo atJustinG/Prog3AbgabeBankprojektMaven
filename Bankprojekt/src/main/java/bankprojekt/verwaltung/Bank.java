@@ -184,19 +184,32 @@ public class Bank {
         return false;
     }
 
+    /**
+     * methode um alle Konten zu sperren dessen Kontostand im Minus ist
+     */
     public void pleitegeierSperren(){
         Stream<Konto> kontoStream = konten.values().stream();
         kontoStream.filter(konto -> konto.getKontostand() < 0);
         kontoStream.forEach(konto -> konto.sperren());
     }
 
+    /**
+     * diese Methode gibt alle Kunden zurück dessen Kontostand gleich oder ueber dem angegebenen Kontostand sind
+     * @param minimum der minimalste Kontostand
+     * @return eine Liste aller gefilterten Kunden
+     */
     public List<Kunde> getKundenMitVollemKonto(double minimum){
         Stream<Konto> kontoStream = konten.values().stream();
         List<Kunde> kundenListe = new ArrayList<Kunde>();
-        kontoStream.forEach(konto -> kundenListe.add(konten.get(kontonummer).getInhaber()));
+        Stream<Konto> tempKontoStream = kontoStream.filter(konto -> konto.getKontostand() >= minimum);
+        tempKontoStream.forEach(konto -> kundenListe.add(konten.get(kontonummer).getInhaber()));
         return kundenListe;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getKundengeburtstage(){
         Stream<Konto> kontoStream = konten.values().stream();
         String gebTag = "--.--.----";
