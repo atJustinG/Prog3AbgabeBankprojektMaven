@@ -1,9 +1,12 @@
-package bankprojekt.verarbeitung;
+package bakprojekt.verwaltung;
 
+import bankprojekt.verarbeitung.GesperrtException;
+import bankprojekt.verarbeitung.Kunde;
+import bankprojekt.verarbeitung.UeberweisungsfaehigesKonto;
+import bankprojekt.verwaltung.Bank;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.api.function.Executable;
 import org.mockito.*;
 

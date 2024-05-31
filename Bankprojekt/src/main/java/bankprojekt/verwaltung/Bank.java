@@ -1,10 +1,13 @@
-package bankprojekt.verarbeitung;
+package bankprojekt.verwaltung;
 
+
+import bankprojekt.verarbeitung.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Stream;
 
 /**
  * Klasse Bank beschreibt das verhalten einer Bank die Konten verwaltet
@@ -179,5 +182,32 @@ public class Bank {
             }
         }
         return false;
+    }
+
+    public void pleitegeierSperren(){
+        Stream<Konto> kontoStream = konten.values().stream();
+        kontoStream.filter(konto -> konto.getKontostand() < 0);
+        kontoStream.forEach(konto -> konto.sperren());
+    }
+
+    public List<Kunde> getKundenMitVollemKonto(double minimum){
+        Stream<Konto> kontoStream = konten.values().stream();
+        List<Kunde> kundenListe = new ArrayList<Kunde>();
+        kontoStream.forEach(konto -> kundenListe.add(konten.get(kontonummer).getInhaber()));
+        return kundenListe;
+    }
+
+    public String getKundengeburtstage(){
+        Stream<Konto> kontoStream = konten.values().stream();
+        String gebTag = "--.--.----";
+        kontoStream.forEach(konto -> gebTag.replace("--.--.----", konten.get(kontonummer).getInhaber().getGeburtstag().toString()));
+        return gebTag;
+    }
+
+    public List<Long> getKontonummernLuecken(){
+        List<Long> kontoNummerListe = new ArrayList<Long>();
+        Stream<Konto> kontoStream = konten.values().stream();
+        kontoStream.forEach(konto -> kontoNummerListe.add(konten.get(kontonummer).getKontonummer()));
+        return kontoNummerListe;
     }
 }

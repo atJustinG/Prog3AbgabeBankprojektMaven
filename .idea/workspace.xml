@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91ebef08-8190-4211-8cff-986e267e4295" name="Changes" comment="tests cases and comments added">
+    <list default="true" id="91ebef08-8190-4211-8cff-986e267e4295" name="Changes" comment="loeschen Funktion hinzugefuegt">
+      <change afterPath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/StreamsUebung.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bankprojekt/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/verarbeitung/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/verarbeitung/Bank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bankprojekt/src/test/java/bankprojekt/verarbeitung/BankTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/src/test/java/bankprojekt/verarbeitung/BankTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bankprojekt/target/classes/bankprojekt/verarbeitung/Waehrung.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/target/classes/bankprojekt/verarbeitung/Waehrung.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/verarbeitung/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/verwaltung/Bank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bankprojekt/src/test/java/bankprojekt/verarbeitung/BankTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/src/test/java/bakprojekt/verwaltung/BankTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +43,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.KontenSpielereien.executor": "Run",
     "JUnit.BankTest.GeldUeberweisenWennKontoZUSparbuchDannFalse.executor": "Run",
     "JUnit.BankTest.executor": "Run",
@@ -66,7 +66,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/justi/IdeaProjects/Prog3AbgabeBankprojektMaven/Bankprojekt/src/main/java/Bankprojekt",
+    "last_opened_file_path": "C:/Users/justi/IdeaProjects/Prog3AbgabeBankprojektMaven",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0"
@@ -80,10 +80,17 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\justi\IdeaProjects\Prog3AbgabeBankprojektMaven\Bankprojekt\src\main\java\bankprojekt\verarbeitung" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="bankprojekt" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="bankprojekt.verarbeitung" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="bakprojekt.verwaltung" />
       <recent name="Bankprojekt" />
       <recent name="TWH" />
     </key>
@@ -93,12 +100,12 @@
       <module name="Bankprojekt" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="bankprojekt.verarbeitung.*" />
+          <option name="PATTERN" value="bankprojekt.verwaltung.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="bankprojekt.verarbeitung" />
-      <option name="MAIN_CLASS_NAME" value="bankprojekt.verarbeitung.BankTest" />
+      <option name="PACKAGE_NAME" value="bakprojekt.verwaltung" />
+      <option name="MAIN_CLASS_NAME" value="bakprojekt.verwaltung.BankTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -108,12 +115,12 @@
       <module name="Bankprojekt" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="bankprojekt.verarbeitung.*" />
+          <option name="PATTERN" value="bankprojekt.verwaltung.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="bankprojekt.verarbeitung" />
-      <option name="MAIN_CLASS_NAME" value="bankprojekt.verarbeitung.BankTest" />
+      <option name="PACKAGE_NAME" value="bakprojekt.verwaltung" />
+      <option name="MAIN_CLASS_NAME" value="bakprojekt.verwaltung.BankTest" />
       <option name="METHOD_NAME" value="geldUeberweisenWennGirokontoVonExistiertNichtInListeDannFalse" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -124,12 +131,12 @@
       <module name="Bankprojekt" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="bankprojekt.verarbeitung.*" />
+          <option name="PATTERN" value="bankprojekt.verwaltung.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="bankprojekt.verarbeitung" />
-      <option name="MAIN_CLASS_NAME" value="bankprojekt.verarbeitung.BankTest" />
+      <option name="PACKAGE_NAME" value="bakprojekt.verwaltung" />
+      <option name="MAIN_CLASS_NAME" value="bakprojekt.verwaltung.BankTest" />
       <option name="METHOD_NAME" value="geldUeberweisenWennKontoIstGesperrt" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -140,12 +147,12 @@
       <module name="Bankprojekt" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="bankprojekt.verarbeitung.*" />
+          <option name="PATTERN" value="bankprojekt.verwaltung.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="bankprojekt.verarbeitung" />
-      <option name="MAIN_CLASS_NAME" value="bankprojekt.verarbeitung.BankTest" />
+      <option name="PACKAGE_NAME" value="bakprojekt.verwaltung" />
+      <option name="MAIN_CLASS_NAME" value="bakprojekt.verwaltung.BankTest" />
       <option name="METHOD_NAME" value="geldUeberweisenWennKontoVonGedecktDannTrue" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -156,12 +163,12 @@
       <module name="Bankprojekt" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="bankprojekt.verarbeitung.*" />
+          <option name="PATTERN" value="bankprojekt.verwaltung.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="bankprojekt.verarbeitung" />
-      <option name="MAIN_CLASS_NAME" value="bankprojekt.verarbeitung.BankTest" />
+      <option name="PACKAGE_NAME" value="bakprojekt.verwaltung" />
+      <option name="MAIN_CLASS_NAME" value="bakprojekt.verwaltung.BankTest" />
       <option name="METHOD_NAME" value="geldUeberweisenWennKontoZuHatKontostandDannEqualsValue" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
