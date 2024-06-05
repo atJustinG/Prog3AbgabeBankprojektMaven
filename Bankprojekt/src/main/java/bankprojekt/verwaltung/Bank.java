@@ -3,10 +3,9 @@ package bankprojekt.verwaltung;
 
 import bankprojekt.verarbeitung.*;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.LongStream;
 import java.util.stream.Stream;
 
 /**
@@ -189,8 +188,7 @@ public class Bank {
      */
     public void pleitegeierSperren(){
         Stream<Konto> kontoStream = konten.values().stream();
-        kontoStream.filter(konto -> konto.getKontostand() < 0);
-        kontoStream.forEach(konto -> konto.sperren());
+        kontoStream.filter(konto -> konto.getKontostand() < 0).forEach(Konto::sperren);
     }
 
     /**
@@ -201,26 +199,31 @@ public class Bank {
     public List<Kunde> getKundenMitVollemKonto(double minimum){
         Stream<Konto> kontoStream = konten.values().stream();
         List<Kunde> kundenListe = new ArrayList<Kunde>();
-        Stream<Konto> tempKontoStream = kontoStream.filter(konto -> konto.getKontostand() >= minimum);
-        tempKontoStream.forEach(konto -> kundenListe.add(konten.get(kontonummer).getInhaber()));
+        kontoStream.filter(konto -> konto.getKontostand() >= minimum).forEach(konto -> kundenListe.add(konten.get(kontonummer).getInhaber()));
         return kundenListe;
+    }
+
+    /**
+     * liefert den Name Vornam und Geburstag des Kunden als String zurück
+     * @return String des Geburstags + Vor und Nachname
+     */
+    public String getKundengeburtstage(){
+        Stream<Konto> kontoStream = konten.values().stream();
+        return kontoStream.map(Konto::getInhaber)
+                .distinct()
+                .map(kunde -> "Vorname: " + kunde.getName() + "Nachname " + kunde.getNachname() + "Geburstag: " + kunde.getGeburtstag())
+                .collect(Collectors.joining(System.lineSeparator()));
     }
 
     /**
      *
      * @return
      */
-    public String getKundengeburtstage(){
-        Stream<Konto> kontoStream = konten.values().stream();
-        String gebTag = "--.--.----";
-        kontoStream.forEach(konto -> gebTag.replace("--.--.----", konten.get(kontonummer).getInhaber().getGeburtstag().toString()));
-        return gebTag;
-    }
-
     public List<Long> getKontonummernLuecken(){
-        List<Long> kontoNummerListe = new ArrayList<Long>();
+        List<Long> kontoNummerListe = new LinkedList<Long>();
+        LongStream allLongs = LongStream.range(1, konten.keySet().stream().mapToLong(konto -> konto).max().orElse(1));
         Stream<Konto> kontoStream = konten.values().stream();
-        kontoStream.forEach(konto -> kontoNummerListe.add(konten.get(kontonummer).getKontonummer()));
+        allLongs.filter(aLong -> !konten.containsKey(aLong)).forEach(kontoNummerListe::add);
         return kontoNummerListe;
     }
 }
