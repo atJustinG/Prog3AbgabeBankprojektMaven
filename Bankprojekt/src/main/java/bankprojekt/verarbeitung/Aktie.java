@@ -4,10 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.TimeUnit;
-import java.util.concurrent.locks.Condition;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
+import java.util.concurrent.locks.*;
 
 /**
  * Eine Aktie, die ständig ihren Kurs verändert
@@ -20,10 +19,10 @@ public class Aktie {
 	private String wkn;
 	private double kurs;
 	private final Lock l = new ReentrantLock();
-	private final Condition kursUnterPreis = l.newCondition();
-	private final Condition kursUeberPreis = l.newCondition();
+	private final Condition preisAendedrung = l.newCondition();
 
-	ScheduledExecutorService schedExService;
+	private static final ScheduledExecutorService schedExService = Executors.newScheduledThreadPool(0,Thread.ofPlatform().daemon().factory());
+
 	
 	/**
 	 * gibt die Aktie mit der gewünschten Wertpapierkennnummer zurück
@@ -51,14 +50,12 @@ public class Aktie {
 		this.wkn = wkn;
 		this.kurs = k;
 		alleAktien.put(wkn, this);
-		schedExService = Executors.newScheduledThreadPool(0);
-		schedExService.scheduleAtFixedRate(() ->{
+        schedExService.scheduleAtFixedRate(() ->{
 			l.lock();
 			try{
 				double preisAendern = (Math.random() * 6) - 3;
 				this.kurs += this.kurs * (preisAendern /100);
-				kursUnterPreis.signalAll();
-				kursUeberPreis.signalAll();
+				preisAendedrung.signalAll();
 			} finally{
 				l.unlock();
 			}
@@ -77,7 +74,7 @@ public class Aktie {
 		l.lock();
 		try {
 			while (kurs > preis) {
-				kursUnterPreis.await();
+				preisAendedrung.await();
 			}
 		} finally {
 			l.unlock();
@@ -93,7 +90,7 @@ public class Aktie {
 		l.lock();
 		try{
 			while(kurs < preis){
-				kursUeberPreis.await();
+				preisAendedrung.await();
 			}
 		}finally{
 			l.unlock();
