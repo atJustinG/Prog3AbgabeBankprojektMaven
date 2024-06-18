@@ -38,7 +38,9 @@ public class Aktie {
 	
 	/**
 	 * erstellt eine neu Aktie mit den angegebenen Werten
-	 * @param wkn Wertpapierkennnummer
+	 * erstellt einen executor der den Kurs der Aktie immer zufällig um -3% bis 3% ändert
+	 * sobald der Kurs unter bzw uber einem bestimmten Preis fällt signalisiert er dies.
+ 	 * @param wkn Wertpapierkennnummer
 	 * @param k aktueller Kurs
 	 * @throws IllegalArgumentException wenn einer der Parameter null bzw. negativ ist
 	 * 		                            oder es eine Aktie mit dieser WKN bereits gibt
@@ -66,6 +68,11 @@ public class Aktie {
 
 	}
 
+	/**
+	 * diese Methode wartet solange wie der Preis nicht unter einem bestimmten Preis fällt um sie zu kaufen
+	 * @param preis der Preis unter dem der Kurs sein muss damit die Aktie gekauft wird
+	 * @throws InterruptedException falls der Thread interrupted wird
+	 */
 	public void warteBisKursUnter(double preis) throws InterruptedException {
 		l.lock();
 		try {
@@ -77,6 +84,11 @@ public class Aktie {
 		}
 	}
 
+	/**
+	 * diese Methode wartet solange der Preis nicht ueber einem bestimmten Preis ist um sie zu verkaufen
+	 * @param preis der Preis ueber dem der Kurs sein muss damit die Aktie gekauft wird
+	 * @throws InterruptedException falls der Thread interrupted wird
+	 */
 	public void warteBisKursUeber(double preis) throws InterruptedException {
 		l.lock();
 		try{
