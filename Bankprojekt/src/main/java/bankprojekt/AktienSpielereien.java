@@ -2,7 +2,6 @@ package bankprojekt;
 
 import bankprojekt.verarbeitung.Aktie;
 import bankprojekt.verarbeitung.AktienKonto;
-import bankprojekt.verarbeitung.GesperrtException;
 import bankprojekt.verarbeitung.Kunde;
 
 import java.util.concurrent.*;
@@ -16,13 +15,8 @@ public class AktienSpielereien {
         Aktie aktie2 = new Aktie("WKN002", 75.0);
         Aktie aktie3 = new Aktie("WKN003", 100.0);
 
-
-        // Erstellen Sie ein AktienKonto
         AktienKonto aktienKonto = new AktienKonto(new Kunde(), 123456);
-
-        // Einzahlen auf das Konto
         aktienKonto.einzahlen(10000.0);
-
 
         ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
         scheduler.scheduleAtFixedRate(() -> {
@@ -30,7 +24,6 @@ public class AktienSpielereien {
             System.out.println("Aktueller Kurs von 02: " + aktie2.getKurs());
             System.out.println("Aktueller Kurs von 03: " + aktie3.getKurs());
             System.out.println("---------------------------");
-
         }, 0, 3, TimeUnit.SECONDS);
 
         Future<Double> kaufpreis1 = aktienKonto.kaufauftrag("WKN001", 10, 49.0);
@@ -73,5 +66,4 @@ public class AktienSpielereien {
             e.printStackTrace();
         }
     }
-
 }

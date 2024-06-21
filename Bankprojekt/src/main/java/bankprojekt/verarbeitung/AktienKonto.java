@@ -34,7 +34,6 @@ public class AktienKonto extends Konto {
      * @param anzahl       Anzahl der zu kaufenden Aktien
      * @param hoechstpreis der maximale Preis zu dem die Aktie gekauft werden soll
      * @return den Gesamtpreis der gekauften Aktien oder 0.0 wenn eine Aktie nicht existiert, Das Konto nicht gedeckt oder gesperrt ist
-     * @throws GesperrtException bei gesperrtem Konto
      */
     public Future<Double> kaufauftrag(String wkn, int anzahl, double hoechstpreis){
         return CompletableFuture.supplyAsync(() -> {
