@@ -13,7 +13,7 @@ public class Girokonto extends UeberweisungsfaehigesKonto{
 	 * Wert, bis zu dem das Konto überzogen werden darf
 	 */
 	private double dispo;
-
+	private static final long serialVersionUID = 1L;
 	/**
 	 * erzeugt ein leeres, nicht gesperrtes Standard-Girokonto
 	 * von Max MUSTERMANN

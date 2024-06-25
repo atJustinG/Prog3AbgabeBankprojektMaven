@@ -14,7 +14,7 @@ public class Sparbuch extends Konto {
 	 * Zinssatz, mit dem das Sparbuch verzinst wird. 0,03 entspricht 3%
 	 */
 	private double zinssatz;
-	
+	private static final long serialVersionUID = 1L;
 	/**
 	 * Monatlich erlaubter Gesamtbetrag für Abhebungen
 	 */

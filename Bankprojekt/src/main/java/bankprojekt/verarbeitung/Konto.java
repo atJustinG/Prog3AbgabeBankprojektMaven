@@ -1,13 +1,16 @@
 package bankprojekt.verarbeitung;
 
 import com.google.common.primitives.Doubles;
+
+import java.io.Serializable;
 //Abkürzung des Klassennamens ist jetzt erlaubt
 
 /**
  * stellt ein allgemeines Bank-Konto dar
  */
-public abstract class Konto implements Comparable<Konto>
+public abstract class Konto implements Serializable, Comparable<Konto>
 {
+	private static final long serialVersionUID = 1L;
 	//Methode ist IGITTIGITT!
 	//Trenne Verarbeitung von Ein- und Ausgabe!
 	public void aufDerKonsoleAusgeben()

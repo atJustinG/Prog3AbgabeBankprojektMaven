@@ -3,6 +3,7 @@ package bankprojekt.verwaltung;
 
 import bankprojekt.verarbeitung.*;
 
+import java.io.*;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.LongStream;
@@ -12,7 +13,7 @@ import java.util.stream.Stream;
  * Klasse Bank beschreibt das verhalten einer Bank die Konten verwaltet
  * @author Justin Glowa
  */
-public class Bank {
+public class Bank implements Serializable, Cloneable {
 
     private long bankleitzahl;
 
@@ -27,6 +28,27 @@ public class Bank {
      */
     public Bank(long bankleitzahl){
         this.bankleitzahl = bankleitzahl;
+    }
+
+    @Override
+    public Bank clone() {
+        try {
+            // Serialisiere das Bank-Objekt in einen ByteArrayOutputStream
+            ByteArrayOutputStream bos = new ByteArrayOutputStream();
+            ObjectOutputStream out = new ObjectOutputStream(bos);
+            out.writeObject(this);
+            out.flush();
+
+            // Wandle den ByteArrayOutputStream in ein Byte-Array um
+            byte[] byteData = bos.toByteArray();
+
+            // Öffne einen ByteArrayInputStream für das Byte-Array und deserialisiere die Kopie
+            ByteArrayInputStream bis = new ByteArrayInputStream(byteData);
+            ObjectInputStream in = new ObjectInputStream(bis);
+            return (Bank) in.readObject();
+        } catch (IOException | ClassNotFoundException e) {
+            throw new AssertionError(e); // Sollte nicht passieren
+        }
     }
 
     /**

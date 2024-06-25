@@ -1,6 +1,7 @@
 package bakprojekt.verwaltung;
 
 import bankprojekt.verarbeitung.GesperrtException;
+import bankprojekt.verarbeitung.Girokonto;
 import bankprojekt.verarbeitung.Kunde;
 import bankprojekt.verarbeitung.UeberweisungsfaehigesKonto;
 import bankprojekt.verwaltung.Bank;
@@ -9,6 +10,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 import org.mockito.*;
+
+import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.*;
@@ -143,7 +146,34 @@ class BankTest {
                 bank.geldUeberweisen(mockKonto1.getKontonummer(), kontoNummer2, 200,"sollte werfen");
             }
         });
+    }
 
+    @Test
+    public void testBankClone() {
+        Bank originalBank = new Bank(123456);
+        Kunde kunde = new Kunde();
+        long kontoNummer = originalBank.girokontoErstellen(kunde);
+        Bank clonedBank = originalBank.clone();
+
+
+        assertEquals(originalBank.getAlleKonten(), clonedBank.getAlleKonten(), "Cloned bank should be equal to the original bank immediately after cloning");
+
+
+        Girokonto originalKonto = (Girokonto) originalBank.getKonto(kontoNummer);
+        Girokonto clonedKonto = (Girokonto) clonedBank.getKonto(kontoNummer);
+
+
+        assertNotSame(originalKonto, clonedKonto, "The Girokonto objects in original and cloned banks should be different objects");
+
+        // Deposit money into the original bank's account
+        double depositAmount = 100.0;
+        originalKonto.einzahlen(depositAmount);
+
+        // Assert that the balance of the original bank's account has increased
+        assertEquals(depositAmount, originalKonto.getKontostand(), "The balance of the original bank's account should reflect the deposit");
+
+        // Assert that the balance of the cloned bank's account has not changed
+        assertEquals(0.0, clonedKonto.getKontostand(), "The balance of the cloned bank's account should not reflect changes made to the original bank's account");
     }
 
 }

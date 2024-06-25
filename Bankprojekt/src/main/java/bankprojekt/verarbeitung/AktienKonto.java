@@ -10,7 +10,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * Klasse Aktienkonto die Aktiendepots sowie deren Kontostand managen soll
  */
 public class AktienKonto extends Konto {
-
+    private static final long serialVersionUID = 1L;
     private Map<String, Integer> aktienDepot;
     private ExecutorService executor;
     private final Lock lock = new ReentrantLock();
