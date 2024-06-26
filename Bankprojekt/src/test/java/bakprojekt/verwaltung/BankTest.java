@@ -148,6 +148,9 @@ class BankTest {
         });
     }
 
+    /**
+     * testet Die Klon Methode der Bank
+     */
     @Test
     public void testBankClone() {
         Bank originalBank = new Bank(123456);
@@ -155,25 +158,22 @@ class BankTest {
         long kontoNummer = originalBank.girokontoErstellen(kunde);
         Bank clonedBank = originalBank.clone();
 
-
-        assertEquals(originalBank.getAlleKonten(), clonedBank.getAlleKonten(), "Cloned bank should be equal to the original bank immediately after cloning");
+        //ueberprüft dass die Objekte ordnungsgemäß geklont wurden
+        assertEquals(originalBank.getAlleKonten(), clonedBank.getAlleKonten());
 
 
         Girokonto originalKonto = (Girokonto) originalBank.getKonto(kontoNummer);
         Girokonto clonedKonto = (Girokonto) clonedBank.getKonto(kontoNummer);
-
-
-        assertNotSame(originalKonto, clonedKonto, "The Girokonto objects in original and cloned banks should be different objects");
-
-        // Deposit money into the original bank's account
-        double depositAmount = 100.0;
-        originalKonto.einzahlen(depositAmount);
-
-        // Assert that the balance of the original bank's account has increased
-        assertEquals(depositAmount, originalKonto.getKontostand(), "The balance of the original bank's account should reflect the deposit");
-
-        // Assert that the balance of the cloned bank's account has not changed
-        assertEquals(0.0, clonedKonto.getKontostand(), "The balance of the cloned bank's account should not reflect changes made to the original bank's account");
+        //ueberprueft dass das Konto und das geklonte Konto nicht das selbe Objekt sind
+        assertNotSame(originalKonto, clonedKonto);
+        double geldWert = 100.0;
+        originalKonto.einzahlen(geldWert);
+        //ueberprueft dass wenn man das original Konto verändert nicht das geklonte Konto mitverändert wird
+        assertEquals(geldWert, originalKonto.getKontostand());
+        assertEquals(0.0, clonedKonto.getKontostand());
+        clonedKonto.einzahlen(geldWert*2);
+        assertEquals((geldWert*2), clonedKonto.getKontostand());
+        assertEquals(geldWert, originalKonto.getKontostand());
     }
 
 }

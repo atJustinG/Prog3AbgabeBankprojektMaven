@@ -30,24 +30,23 @@ public class Bank implements Serializable, Cloneable {
         this.bankleitzahl = bankleitzahl;
     }
 
+    /**
+     * Klon Methode die eine Tiefenkoopie der Bank instanz erstellt und alle dazugehörigen Objekte
+     * @return Bank kopie
+     */
     @Override
     public Bank clone() {
         try {
-            // Serialisiere das Bank-Objekt in einen ByteArrayOutputStream
             ByteArrayOutputStream bos = new ByteArrayOutputStream();
             ObjectOutputStream out = new ObjectOutputStream(bos);
             out.writeObject(this);
             out.flush();
-
-            // Wandle den ByteArrayOutputStream in ein Byte-Array um
             byte[] byteData = bos.toByteArray();
-
-            // Öffne einen ByteArrayInputStream für das Byte-Array und deserialisiere die Kopie
             ByteArrayInputStream bis = new ByteArrayInputStream(byteData);
             ObjectInputStream in = new ObjectInputStream(bis);
             return (Bank) in.readObject();
         } catch (IOException | ClassNotFoundException e) {
-            throw new AssertionError(e); // Sollte nicht passieren
+            throw new AssertionError(e);
         }
     }
 
@@ -238,8 +237,8 @@ public class Bank implements Serializable, Cloneable {
     }
 
     /**
-     *
-     * @return
+     * Gibt die Lücken der Kontonummern zurück
+     * @return Liste aller nicht vergebener Kontonummern
      */
     public List<Long> getKontonummernLuecken(){
         List<Long> kontoNummerListe = new LinkedList<Long>();
