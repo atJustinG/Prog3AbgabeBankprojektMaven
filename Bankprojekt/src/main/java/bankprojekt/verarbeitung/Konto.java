@@ -155,9 +155,27 @@ public abstract class Konto implements Serializable, Comparable<Konto>
 	 * @return true, wenn die Abhebung geklappt hat, 
 	 * 		   false, wenn sie abgelehnt wurde
 	 */
-	public abstract boolean abheben(double betrag) 
-								throws GesperrtException;
-	
+	public boolean abheben(double betrag) throws GesperrtException{
+		if (betrag < 0 || Double.isNaN(betrag) || Double.isInfinite(betrag)) {
+			throw new IllegalArgumentException("Betrag ungültig");
+		}
+		if (this.isGesperrt()) {
+			throw new GesperrtException(this.getKontonummer());
+		}
+		if (pruefeBedingungenFuerAbhebung(betrag)) {
+			setKontostand(getKontostand() - betrag);
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * Hook Methode für abheben
+	 * @param betrag der abzuhebende Betrag
+	 * @return true bei erfolgreicher Abhebung false bei nicht erfolgreicher Abhebung
+	 */
+	protected abstract boolean pruefeBedingungenFuerAbhebung(double betrag);
+
 	/**
 	 * sperrt das Konto, Aktionen zum Schaden des Benutzers sind nicht mehr möglich.
 	 */

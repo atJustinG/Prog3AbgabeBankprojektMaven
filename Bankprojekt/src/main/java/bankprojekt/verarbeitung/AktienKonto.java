@@ -107,7 +107,7 @@ public class AktienKonto extends Konto {
      *
      * @param betrag Betrag der abgehoben werden soll
      * @return true wenn die Abhebung erfolgreich war bei einem gedeckten Konto false wenn sie nicht erfolgreich war
-     * @throws GesperrtException
+     * @throws GesperrtException wenn Konto gesperrt
      */
     @Override
     public boolean abheben(double betrag) throws GesperrtException {
@@ -116,6 +116,16 @@ public class AktienKonto extends Konto {
         }
         setKontostand(getKontostand() - betrag);
         return true;
+    }
+
+    /**
+     * prueft die Bedingungen für eine Abhebung von einem Aktienkonto
+     * @param betrag der abzuhebende Betrag
+     * @return true wenn Bedingung erfüllt, falls bei nicht Erfuellung
+     */
+    @Override
+    protected boolean pruefeBedingungenFuerAbhebung(double betrag) {
+        return getKontostand() >= betrag;
     }
 
 

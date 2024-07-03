@@ -1,4 +1,4 @@
-package ZahlenFormatiertSchreiben;
+package zahlenFormatiertSchreiben;
 
 import java.io.FileWriter;
 import java.io.IOException;

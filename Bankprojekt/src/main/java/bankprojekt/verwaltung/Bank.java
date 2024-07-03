@@ -20,7 +20,6 @@ public class Bank implements Serializable, Cloneable {
     private long kontonummer = 0;
 
     private HashMap<Long, Konto> konten = new HashMap<Long,Konto>();
-   // private HashMap<Long, Konto> konten = new HashMap<Long, Konto>();
 
     /**
      * Konstruktor zur erstellung eines Bankobjekts
@@ -58,17 +57,27 @@ public class Bank implements Serializable, Cloneable {
         return bankleitzahl;
     }
 
+    public long kontoErstellen(KontoFabrik fabrik, Kunde inhaber, long kontonummer){
+
+        while(konten.containsKey(kontonummer)){
+            kontonummer++;
+        }
+        Konto konto = fabrik.kontoErstellen(inhaber, kontonummer);
+        konten.put(kontonummer, konto);
+        return kontonummer;
+    }
+
     /**
      * erstellen und hinzufügen eines Girokontos
      * generiert eine neue Kontonummer bei jedem neu erstelltem Konto und speichert es in einer HashMap
      * @param inhaber Kunde dem das Konto gegeben ist
      * @return die Kontonummer des erstellten Kontos
      */
-    public long girokontoErstellen(Kunde inhaber){
+   /* public long girokontoErstellen(Kunde inhaber){
             kontonummer++;
             konten.put(kontonummer, new Girokonto(inhaber, kontonummer, 500));
             return kontonummer;
-    }
+    }*/
 
     /**
      * genauso wie giroKonto erstellt diese methode ein Sparbuch
@@ -76,22 +85,22 @@ public class Bank implements Serializable, Cloneable {
      * @param inhaber
      * @return
      */
-    public long sparbuchErstellen(Kunde inhaber){
+    /*public long sparbuchErstellen(Kunde inhaber){
             kontonummer++;
             konten.put(kontonummer, new Sparbuch(inhaber, kontonummer));
             return kontonummer;
-    }
+    }*/
 
     /**
      * simple Methode um mock Konten in die Bank einzufuegen
      * @param k das mock Konto
      * @return die Kontonummer des mock Kontos
      */
-    public long mockEinfuegen(Konto k){
+    /*public long mockEinfuegen(Konto k){
         long tempKontonummer = k.getKontonummer();
         konten.put(tempKontonummer, k);
         return tempKontonummer;
-    }
+    }*/
 
     /**
      * gibt alle Konten der Bank in einer Bank als Text zurück mit Konto und Kontostand

@@ -57,7 +57,17 @@ public class Girokonto extends UeberweisungsfaehigesKonto{
 			throw new IllegalArgumentException("Der Dispo ist nicht gültig!");
 		this.dispo = dispo;
 	}
-	
+
+	/**
+	 * sendet eine Ueberweisung von einem Konto zum nächsten
+	 * @param betrag double zu ueberweisender Betrag
+	 * @param empfaenger String der name des Empfaengers
+	 * @param nachKontonr int Kontonummer des Empfaengers
+	 * @param nachBlz int BLZ des Empfaengers
+	 * @param verwendungszweck String Verwendungszweck
+	 * @return true bei erfolgreicher Ueberweisung false bei Fehlerhafter Ueberweisung
+	 * @throws GesperrtException wird geworfen bei einem gesperrten Konto
+	 */
 	@Override
     public boolean ueberweisungAbsenden(double betrag, 
     		String empfaenger, long nachKontonr, 
@@ -94,20 +104,14 @@ public class Girokonto extends UeberweisungsfaehigesKonto{
     	return ausgabe;
     }
 
+	/**
+	 * prueft die Bedingung fuer die abheben Methode in diesem Fall das der Betrag den Dispo nicht ueberzieht
+	 * @param betrag der abzuhebende Betrag
+	 * @return true bei erfuellter Bedingung false bei nicht erfuellen
+	 */
 	@Override
-	public boolean abheben(double betrag) throws GesperrtException{
-		if (betrag < 0 || Double.isNaN(betrag)|| Double.isInfinite(betrag)) {
-			throw new IllegalArgumentException("Betrag ungültig");
-		}
-		if(this.isGesperrt())
-			throw new GesperrtException(this.getKontonummer());
-		if (getKontostand() - betrag >= - dispo)
-		{
-			setKontostand(getKontostand() - betrag);
-			return true;
-		}
-		else
-			return false;
+	protected boolean pruefeBedingungenFuerAbhebung(double betrag) {
+		return getKontostand() - betrag >= -dispo;
 	}
 
 }
