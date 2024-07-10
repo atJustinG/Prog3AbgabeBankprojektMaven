@@ -1,10 +1,10 @@
 bankprojekt\verarbeitung\Kunde$Zerstoerer.class
-bankprojekt\verarbeitung\Kunde.class
-bankprojekt\verarbeitung\Girokonto.class
 bankprojekt\KontenSpielereien.class
 bankprojekt\verarbeitung\Waehrung.class
-bankprojekt\verarbeitung\Sparbuch.class
 bankprojekt\verarbeitung\GesperrtException.class
+bankprojekt\verarbeitung\UeberweisungsfaehigesKonto.class
+bankprojekt\verarbeitung\Kunde.class
+bankprojekt\verarbeitung\Girokonto.class
+bankprojekt\verarbeitung\Sparbuch.class
 bankprojekt\verarbeitung\Kontoart.class
 bankprojekt\verarbeitung\Konto.class
-bankprojekt\verarbeitung\UeberweisungsfaehigesKonto.class

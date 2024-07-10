@@ -3,6 +3,7 @@ package bankprojekt.verarbeitung;
 import com.google.common.primitives.Doubles;
 
 import java.io.Serializable;
+import java.util.HashSet;
 //Abkürzung des Klassennamens ist jetzt erlaubt
 
 /**
@@ -11,6 +12,7 @@ import java.io.Serializable;
 public abstract class Konto implements Serializable, Comparable<Konto>
 {
 	private static final long serialVersionUID = 1L;
+	private final HashSet<KontoObserver> observers = new HashSet<>();
 	//Methode ist IGITTIGITT!
 	//Trenne Verarbeitung von Ein- und Ausgabe!
 	public void aufDerKonsoleAusgeben()
@@ -131,7 +133,9 @@ public abstract class Konto implements Serializable, Comparable<Konto>
 		if (betrag < 0 ||!Doubles.isFinite(betrag)) {
 			throw new IllegalArgumentException("Falscher Betrag");
 		}
+		double letzterKontostand = getKontostand();
 		setKontostand(getKontostand() + betrag);
+		notifyObserver(letzterKontostand, getKontostand());
 	}
 	
 	@Override
@@ -163,7 +167,9 @@ public abstract class Konto implements Serializable, Comparable<Konto>
 			throw new GesperrtException(this.getKontonummer());
 		}
 		if (pruefeBedingungenFuerAbhebung(betrag)) {
+			double letzterKontostand = getKontostand();
 			setKontostand(getKontostand() - betrag);
+			notifyObserver(letzterKontostand, getKontostand());
 			return true;
 		}
 		return false;
@@ -319,4 +325,29 @@ public abstract class Konto implements Serializable, Comparable<Konto>
 			return betrag;
 	}
 
+	/**
+	 * fügt einen Observer zum Objekt hinzu
+	 * @param observer observer der hinzugefügt werden soll
+	 */
+	public void registerObserver(KontoObserver observer) {
+		observers.add(observer);
+	}
+
+	/**
+	 * entfernt den observer vom Objekt
+	 * @param observer observer der entfernt werden soll
+	 */
+	public void removeObserver(KontoObserver observer) {
+		observers.remove(observer);
+	}
+
+	/**
+	 * signalisiert allen listener bei Äanderungen
+	 * @param letzterKontostand der letzte Kontostand
+	 * @param neuerKontostand der aktuelle Kontostand
+	 */
+	protected void notifyObserver(double letzterKontostand, double neuerKontostand) {
+		observers.forEach(observer ->
+				observer.update(this, letzterKontostand ,neuerKontostand));
+	}
 }

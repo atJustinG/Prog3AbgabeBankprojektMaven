@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91ebef08-8190-4211-8cff-986e267e4295" name="Changes" comment="bank clone added">
+    <list default="true" id="91ebef08-8190-4211-8cff-986e267e4295" name="Changes" comment="comments added, Kontofabreik implementiert + Unterklassen, Template Methode fuer abheben(double)erstellt, comments added">
+      <change afterPath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/verarbeitung/KontoObserver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/verarbeitung/KontoObserverImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bankprojekt/BankprojektAbgabeGlowa.7z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bankprojekt/src/main/java/ZahlenFormatiertSchreiben/ZahlenSchreiber.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/src/main/java/ZahlenFormatiertSchreiben/ZahlenSchreiber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/verwaltung/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/verwaltung/Bank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bankprojekt/src/test/java/bakprojekt/verwaltung/BankTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/src/test/java/bakprojekt/verwaltung/BankTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bankprojekt/target/classes/bankprojekt/verarbeitung/Kunde$Zerstoerer.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/target/classes/bankprojekt/verarbeitung/Kunde$Zerstoerer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/verarbeitung/Konto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/verarbeitung/Konto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bankprojekt/src/test/java/bankprojekt/verarbeitung/GiroKontoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/src/test/java/bankprojekt/verarbeitung/GiroKontoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bankprojekt/target/classes/bankprojekt/verarbeitung/Girokonto.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/target/classes/bankprojekt/verarbeitung/Girokonto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bankprojekt/target/classes/bankprojekt/verarbeitung/Konto.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/target/classes/bankprojekt/verarbeitung/Konto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bankprojekt/target/classes/bankprojekt/verarbeitung/Sparbuch.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/target/classes/bankprojekt/verarbeitung/Sparbuch.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bankprojekt/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bankprojekt/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
@@ -22,8 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -66,7 +68,10 @@
     "JUnit.BankTest.kontoLoeschenWennNummerNichtNullDannTrue.executor": "Run",
     "JUnit.BankTest.testBankClone.executor": "Run",
     "JUnit.BankTest.testClone.executor": "Run",
+    "JUnit.GiroKontoTest.abheben_dispoUeberzogen.executor": "Run",
     "JUnit.GiroKontoTest.executor": "Run",
+    "JUnit.GiroKontoTest.testObserverWirdBenachrichtigtBeimAbheben.executor": "Run",
+    "JUnit.GiroKontoTest.testObserverWirdBenachrichtigtBeimEinzahlen.executor": "Run",
     "JUnit.NullstellenTest.nullStelleBerechnen.executor": "Run",
     "JUnit.NullstellenTest.nullStelleBerechnenFunc1und2.executor": "Run",
     "JUnit.NullstellenTest.nullStelleBerechnenFunc3.executor": "Run",
@@ -79,7 +84,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/User/IdeaProjects/Prog3AbgabeBankprojektMaven",
+    "last_opened_file_path": "A:/downloads/Vorgabe Übung 12",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0"
@@ -97,6 +102,7 @@
       <recent name="C:\Users\justi\IdeaProjects\Prog3AbgabeBankprojektMaven\Bankprojekt\src\main\java\bankprojekt\verarbeitung" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="bankprojekt.verarbeitung" />
       <recent name="bankprojekt" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
@@ -109,34 +115,8 @@
       <recent name="TWH" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BankTest.testBankClone">
-    <configuration name="AktienSpielereien" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="bankprojekt.AktienSpielereien" />
-      <module name="Bankprojekt" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="bankprojekt.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ZahlenSchreiber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ZahlenFormatiertSchreiben.ZahlenSchreiber" />
-      <module name="Bankprojekt" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ZahlenFormatiertSchreiben.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BankTest.geldUeberweisenWennKontoIstGesperrt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.GiroKontoTest.testObserverWirdBenachrichtigtBeimEinzahlen">
+    <configuration name="BankTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Bankprojekt" />
       <extension name="coverage">
         <pattern>
@@ -146,39 +126,70 @@
       </extension>
       <option name="PACKAGE_NAME" value="bakprojekt.verwaltung" />
       <option name="MAIN_CLASS_NAME" value="bakprojekt.verwaltung.BankTest" />
-      <option name="METHOD_NAME" value="geldUeberweisenWennKontoIstGesperrt" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BankTest.geldUeberweisenWennKontoZuHatKontostandDannEqualsValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Bankprojekt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bakprojekt.verwaltung.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="bakprojekt.verwaltung" />
+      <option name="MAIN_CLASS_NAME" value="bakprojekt.verwaltung.BankTest" />
+      <option name="METHOD_NAME" value="geldUeberweisenWennKontoZuHatKontostandDannEqualsValue" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BankTest.testBankClone" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GiroKontoTest.abheben_dispoUeberzogen" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Bankprojekt" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="bakprojekt.verwaltung.*" />
+          <option name="PATTERN" value="bankprojekt.verarbeitung.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="bakprojekt.verwaltung" />
-      <option name="MAIN_CLASS_NAME" value="bakprojekt.verwaltung.BankTest" />
-      <option name="METHOD_NAME" value="testBankClone" />
+      <option name="PACKAGE_NAME" value="bankprojekt.verarbeitung" />
+      <option name="MAIN_CLASS_NAME" value="bankprojekt.verarbeitung.GiroKontoTest" />
+      <option name="METHOD_NAME" value="abheben_dispoUeberzogen" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BankTest.testClone" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GiroKontoTest.testObserverWirdBenachrichtigtBeimAbheben" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Bankprojekt" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="bakprojekt.verwaltung.*" />
+          <option name="PATTERN" value="bankprojekt.verarbeitung.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="bakprojekt.verwaltung" />
-      <option name="MAIN_CLASS_NAME" value="bakprojekt.verwaltung.BankTest" />
-      <option name="METHOD_NAME" value="testClone" />
+      <option name="PACKAGE_NAME" value="bankprojekt.verarbeitung" />
+      <option name="MAIN_CLASS_NAME" value="bankprojekt.verarbeitung.GiroKontoTest" />
+      <option name="METHOD_NAME" value="testObserverWirdBenachrichtigtBeimAbheben" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GiroKontoTest.testObserverWirdBenachrichtigtBeimEinzahlen" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Bankprojekt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bankprojekt.verarbeitung.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="bankprojekt.verarbeitung" />
+      <option name="MAIN_CLASS_NAME" value="bankprojekt.verarbeitung.GiroKontoTest" />
+      <option name="METHOD_NAME" value="testObserverWirdBenachrichtigtBeimEinzahlen" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -186,11 +197,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BankTest.testBankClone" />
-        <item itemvalue="Application.ZahlenSchreiber" />
-        <item itemvalue="JUnit.BankTest.testClone" />
-        <item itemvalue="JUnit.BankTest.geldUeberweisenWennKontoIstGesperrt" />
-        <item itemvalue="Application.AktienSpielereien" />
+        <item itemvalue="JUnit.GiroKontoTest.testObserverWirdBenachrichtigtBeimEinzahlen" />
+        <item itemvalue="JUnit.GiroKontoTest.abheben_dispoUeberzogen" />
+        <item itemvalue="JUnit.GiroKontoTest.testObserverWirdBenachrichtigtBeimAbheben" />
+        <item itemvalue="JUnit.BankTest" />
+        <item itemvalue="JUnit.BankTest.geldUeberweisenWennKontoZuHatKontostandDannEqualsValue" />
       </list>
     </recent_temporary>
   </component>
@@ -275,7 +286,23 @@
       <option name="project" value="LOCAL" />
       <updated>1719303591992</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="comments added">
+      <option name="closed" value="true" />
+      <created>1719396365343</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1719396365343</updated>
+    </task>
+    <task id="LOCAL-00011" summary="comments added, Kontofabreik implementiert + Unterklassen, Template Methode fuer abheben(double)erstellt, comments added">
+      <option name="closed" value="true" />
+      <created>1720000516434</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1720000516434</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -290,13 +317,14 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="comments added" />
     <MESSAGE value="mocks added TODO: tests" />
     <MESSAGE value="tests cases and comments added" />
     <MESSAGE value="Aktie Aktienkonto und AktienSpielereien impolementiert fehlen noch javaDoc kommentare" />
     <MESSAGE value="Javadoc comments added" />
     <MESSAGE value="bank clone added" />
-    <option name="LAST_COMMIT_MESSAGE" value="bank clone added" />
+    <MESSAGE value="comments added" />
+    <MESSAGE value="comments added, Kontofabreik implementiert + Unterklassen, Template Methode fuer abheben(double)erstellt, comments added" />
+    <option name="LAST_COMMIT_MESSAGE" value="comments added, Kontofabreik implementiert + Unterklassen, Template Methode fuer abheben(double)erstellt, comments added" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Prog3AbgabeBankprojektMaven$BankTest.ic" NAME="BankTest Coverage Results" MODIFIED="1717002887566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">

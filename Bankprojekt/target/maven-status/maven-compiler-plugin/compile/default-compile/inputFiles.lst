@@ -1,6 +1,9 @@
+C:\Users\User\IdeaProjects\Prog3AbgabeBankprojektMaven\Bankprojekt\src\main\java\bankprojekt\verarbeitung\KontoObserver.java
 C:\Users\User\IdeaProjects\Prog3AbgabeBankprojektMaven\Bankprojekt\src\main\java\bankprojekt\StreamsUebung.java
+C:\Users\User\IdeaProjects\Prog3AbgabeBankprojektMaven\Bankprojekt\src\main\java\bankprojekt\verarbeitung\SparbuchFabrik.java
 C:\Users\User\IdeaProjects\Prog3AbgabeBankprojektMaven\Bankprojekt\src\main\java\nullStellen\Nullstellen.java
 C:\Users\User\IdeaProjects\Prog3AbgabeBankprojektMaven\Bankprojekt\src\main\java\bankprojekt\KontenSpielereien.java
+C:\Users\User\IdeaProjects\Prog3AbgabeBankprojektMaven\Bankprojekt\src\main\java\bankprojekt\verarbeitung\KontoFabrik.java
 C:\Users\User\IdeaProjects\Prog3AbgabeBankprojektMaven\Bankprojekt\src\main\java\bankprojekt\verarbeitung\Sparbuch.java
 C:\Users\User\IdeaProjects\Prog3AbgabeBankprojektMaven\Bankprojekt\src\main\java\bankprojekt\AktienSpielereien.java
 C:\Users\User\IdeaProjects\Prog3AbgabeBankprojektMaven\Bankprojekt\src\main\java\bankprojekt\verarbeitung\Waehrung.java
@@ -9,9 +12,13 @@ C:\Users\User\IdeaProjects\Prog3AbgabeBankprojektMaven\Bankprojekt\src\main\java
 C:\Users\User\IdeaProjects\Prog3AbgabeBankprojektMaven\Bankprojekt\src\main\java\bankprojekt\verarbeitung\Kontoart.java
 C:\Users\User\IdeaProjects\Prog3AbgabeBankprojektMaven\Bankprojekt\src\main\java\bankprojekt\verarbeitung\Kunde.java
 C:\Users\User\IdeaProjects\Prog3AbgabeBankprojektMaven\Bankprojekt\src\main\java\bankprojekt\verarbeitung\AktienKonto.java
+C:\Users\User\IdeaProjects\Prog3AbgabeBankprojektMaven\Bankprojekt\src\main\java\bankprojekt\verarbeitung\AktienKontoFabrik.java
+C:\Users\User\IdeaProjects\Prog3AbgabeBankprojektMaven\Bankprojekt\src\main\java\bankprojekt\verarbeitung\Observer.java
+C:\Users\User\IdeaProjects\Prog3AbgabeBankprojektMaven\Bankprojekt\src\main\java\bankprojekt\verarbeitung\Subjekt.java
 C:\Users\User\IdeaProjects\Prog3AbgabeBankprojektMaven\Bankprojekt\src\main\java\bankprojekt\verarbeitung\UeberweisungsfaehigesKonto.java
 C:\Users\User\IdeaProjects\Prog3AbgabeBankprojektMaven\Bankprojekt\src\main\java\bankprojekt\verarbeitung\Konto.java
 C:\Users\User\IdeaProjects\Prog3AbgabeBankprojektMaven\Bankprojekt\src\main\java\nullStellen\Ifunktion.java
-C:\Users\User\IdeaProjects\Prog3AbgabeBankprojektMaven\Bankprojekt\src\main\java\ZahlenFormatiertSchreiben\ZahlenSchreiber.java
+C:\Users\User\IdeaProjects\Prog3AbgabeBankprojektMaven\Bankprojekt\src\main\java\zahlenFormatiertSchreiben\ZahlenSchreiber.java
 C:\Users\User\IdeaProjects\Prog3AbgabeBankprojektMaven\Bankprojekt\src\main\java\bankprojekt\verwaltung\Bank.java
 C:\Users\User\IdeaProjects\Prog3AbgabeBankprojektMaven\Bankprojekt\src\main\java\bankprojekt\verarbeitung\Aktie.java
+C:\Users\User\IdeaProjects\Prog3AbgabeBankprojektMaven\Bankprojekt\src\main\java\bankprojekt\verarbeitung\GirokontoFabrik.java

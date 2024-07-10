@@ -3,13 +3,18 @@ package bankprojekt.verarbeitung;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
+import org.mockito.Mockito;
+
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
 
 /**
  * testet die Methoden waehrungswechsel und abheben für Girokonto
  */
 class GiroKontoTest {
     Konto konto1;
+    Konto konto2;
+    KontoObserver observer;
 
     /**
      * Konto Objekt mit einem Kontostand von 100 Euro als basis für alle weiteren tests
@@ -18,6 +23,11 @@ class GiroKontoTest {
     void setUp() {
         konto1 = new Girokonto();
         konto1.setKontostand(100);
+        konto2 = new Sparbuch();
+        konto2.setKontostand(300);
+        observer = Mockito.mock(KontoObserver.class);
+        konto1.registerObserver(observer);
+        konto2.registerObserver(observer);
     }
 
     /**
@@ -159,6 +169,23 @@ class GiroKontoTest {
           assertEquals(0, konto1.getKontostand());
     }
 
+    /**
+     * testet ob der Observer 1 mal aufgerufen wird
+     */
+    @Test
+    void testObserverWirdBenachrichtigtBeimEinzahlen() {
+        konto1.einzahlen(100);
+        verify(observer, times(1)).update(eq(konto1), eq(100.0), eq(200.0));
+    }
 
+    /**
+     * testet ob der observer update 1 mal aufgerufen wurde
+     * @throws GesperrtException bei gesperrtem Konto
+     */
+    @Test
+    void testObserverWirdBenachrichtigtBeimAbheben() throws GesperrtException{
+        konto1.abheben(100);
+        verify(observer, times(1)).update(eq(konto1), eq(100.0), eq(0.0));
+    }
 
 }
