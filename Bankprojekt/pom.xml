@@ -40,6 +40,11 @@
           <version>5.11.0</version>
           <scope>test</scope>
       </dependency>
+      <dependency>
+          <groupId>org.openjfx</groupId>
+          <artifactId>javafx-controls</artifactId>
+          <version>23-ea+22</version>
+      </dependency>
   </dependencies>
 
   <build>
