@@ -25,6 +25,14 @@ public class KontoController extends Application {
         setEventHandlers();
     }
 
+    private void einzahlenEvent(double betrag){
+        konto.einzahlen(betrag);
+    }
+
+    private void abhebenEvent(double betrag){
+        konto.abheben(betrag);
+    }
+
     private void setEventHandlers(){
         kOberflaeche.getEinzahlenButton().setOnAction(event -> konto.einzahlen(Double.parseDouble(kOberflaeche.getBetragTextField().getText())));
         kOberflaeche.getAbhebenButton().setOnAction(event -> {

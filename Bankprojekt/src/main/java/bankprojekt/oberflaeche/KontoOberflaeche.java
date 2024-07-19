@@ -1,5 +1,6 @@
 package bankprojekt.oberflaeche;
 
+import bankprojekt.KontoController;
 import bankprojekt.verarbeitung.GesperrtException;
 import bankprojekt.verarbeitung.Konto;
 import javafx.beans.binding.Bindings;
@@ -69,7 +70,7 @@ public class KontoOberflaeche extends BorderPane {
 	/**
 	 * erstellt die Oberfläche
 	 */
-	public KontoOberflaeche(Konto konto)
+	public KontoOberflaeche(Konto konto, KontoController kKontroller)
 	{
 		ueberschrift = new Text("Ein Konto verändern");
 		ueberschrift.setFont(new Font("Sans Serif", 25));
@@ -138,41 +139,7 @@ public class KontoOberflaeche extends BorderPane {
 		this.setBottom(aktionen);
 	}
 
-	public Text getNummerText() {
-		return nummer;
+	public void exceptionMeldung(){
+
 	}
-
-	public Text getStandText() {
-		return stand;
-	}
-
-	public CheckBox getGesperrtCheckBox() {
-		return gesperrt;
-	}
-
-	public TextArea getAdresseTextArea() {
-		return adresse;
-	}
-
-	public Text getMeldungText() {
-		return meldung;
-	}
-
-	public TextField getBetragTextField() {
-		return betrag;
-	}
-
-	public Button getEinzahlenButton() {
-		return einzahlen;
-	}
-
-	public Button getAbhebenButton() {
-		return abheben;
-	}
-
-	public void setMeldung(String message) {
-		meldung.setText(message);
-	}
-
-
 }

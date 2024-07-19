@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91ebef08-8190-4211-8cff-986e267e4295" name="Changes" comment="comments added, Kontofabreik implementiert + Unterklassen, Template Methode fuer abheben(double)erstellt, comments added">
-      <change afterPath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/verarbeitung/KontoObserver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/verarbeitung/KontoObserverImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/verarbeitung/Konto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/verarbeitung/Konto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bankprojekt/src/test/java/bankprojekt/verarbeitung/GiroKontoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/src/test/java/bankprojekt/verarbeitung/GiroKontoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bankprojekt/target/classes/bankprojekt/verarbeitung/Girokonto.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/target/classes/bankprojekt/verarbeitung/Girokonto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bankprojekt/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/KontoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/KontoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/oberflaeche/KontoOberflaeche.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/src/main/java/bankprojekt/oberflaeche/KontoOberflaeche.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bankprojekt/target/classes/bankprojekt/verarbeitung/Konto.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/target/classes/bankprojekt/verarbeitung/Konto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bankprojekt/target/classes/bankprojekt/verarbeitung/Sparbuch.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/target/classes/bankprojekt/verarbeitung/Sparbuch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bankprojekt/target/classes/bankprojekt/verarbeitung/Kunde$Zerstoerer.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/target/classes/bankprojekt/verarbeitung/Kunde$Zerstoerer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bankprojekt/target/classes/bankprojekt/verarbeitung/Kunde.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/target/classes/bankprojekt/verarbeitung/Kunde.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bankprojekt/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bankprojekt/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Bankprojekt/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
@@ -78,6 +77,7 @@
     "JUnit.NullstellenTest.nullStellenBerechnenRekursiv.executor": "Run",
     "JUnit.SparbuchTest.executor": "Run",
     "Maven.Bankprojekt [compile].executor": "Run",
+    "Maven.Bankprojekt [org.openjfx:javafx-maven-plugin:0.0.8:run].executor": "Run",
     "Maven.Bankprojekt [package].executor": "Run",
     "Maven.Bankprojekt [verify].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
