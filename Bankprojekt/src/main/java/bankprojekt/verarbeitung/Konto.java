@@ -46,21 +46,34 @@ public abstract class Konto implements Serializable, Comparable<Konto>
 	 * die zum Schaden des Kontoinhabers wären (abheben, Inhaberwechsel)
 	 */
 	private final BooleanProperty gesperrt = new SimpleBooleanProperty(false);
-
+	/**
+	 * Property um zu erkennen wenn das Konto im plus ist
+	 */
 	private final BooleanProperty kontostandImPlus = new SimpleBooleanProperty(true);
 
+	/**
+	 * Property um den Kontostand weitergeben zu können
+	 * @return den aktuellen Kontostand
+	 */
 	public ReadOnlyDoubleProperty getKontostandProperty(){
 		return kontostand.getReadOnlyProperty();
 	}
 
+	/**
+	 * gibt das gesperrt Property weiter
+	 * @return gersperrt
+	 */
 	public BooleanProperty getGesperrtProperty(){
 		return gesperrt;
 	}
 
+	/**
+	 * gibt den KontoStandImplus wieder
+	 * @return kontostandimPluis
+	 */
 	public BooleanProperty getKontostandImPlus(){
 		return kontostandImPlus;
 	}
-
 
 
 	/**
@@ -237,6 +250,7 @@ public abstract class Konto implements Serializable, Comparable<Konto>
 			return "";
 		}
 	}
+
 	
 	/**
 	 * liefert die ordentlich formatierte Kontonummer

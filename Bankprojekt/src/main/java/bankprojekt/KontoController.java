@@ -6,48 +6,52 @@ import bankprojekt.verarbeitung.Girokonto;
 import bankprojekt.verarbeitung.Kunde;
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+/**
+ * Kontroller Klasse um mit der Konto Oberflaeche zu kommunizieren und zu steuern
+ */
 public class KontoController extends Application {
     Girokonto konto;
     private KontoOberflaeche kOberflaeche;
 
+    /**
+     * start Methode startet die Anwendung
+     * @param stage visualisiert das Fenster
+     * @throws Exception bei Fehler wirft eine Exception
+     */
     @Override
     public void start(Stage stage) throws Exception {
         konto = new Girokonto(new Kunde(), 123456789, 500);
-        kOberflaeche = new KontoOberflaeche(konto);
+        kOberflaeche = new KontoOberflaeche(konto, this);
 
         Scene scene = new Scene(kOberflaeche, 600, 400);
         stage.setScene(scene);
         stage.setTitle("Konto Verwaltung");
         stage.show();
-
-        setEventHandlers();
     }
 
-    private void einzahlenEvent(double betrag){
+    /**
+     * einzahlen Methode eventhandler per Knopfdruck der Oberflaeche ins Konto einzuzahlen
+     * @param betrag einzuzahlender Betrag
+     * @param meldung Meldung bei Fehlverhalten
+     */
+    public void einzahlenEvent(double betrag, Text meldung){
         konto.einzahlen(betrag);
     }
 
-    private void abhebenEvent(double betrag){
-        konto.abheben(betrag);
-    }
-
-    private void setEventHandlers(){
-        kOberflaeche.getEinzahlenButton().setOnAction(event -> konto.einzahlen(Double.parseDouble(kOberflaeche.getBetragTextField().getText())));
-        kOberflaeche.getAbhebenButton().setOnAction(event -> {
-            try{
-                konto.abheben(Double.parseDouble(kOberflaeche.getBetragTextField().getText()));
-            }catch(GesperrtException e){
-                e.printStackTrace();
-            }
-        });
-        kOberflaeche.getGesperrtCheckBox().selectedProperty().addListener((obs, wasSelected, isNowSelected) -> konto.sperren());
-        kOberflaeche.getAdresseTextArea().textProperty().addListener((obs, oldText, newText) -> konto.getInhaber().setAdresse(newText));
-    }
-
-
-    public static void main(String[] args) {
-        launch(args);
+    /**
+     * abheben Methode eventhandler per Knopfdruck der Oberflaeche vom Konto abzuheben
+     * @param betrag abzuhebender Betrag
+     * @param meldung Meldung bei Fehlverhalten
+     * @throws NumberFormatException wirft bei falscher eingabe eine NumberformatException
+     */
+    public void abhebenEvent(double betrag, Text meldung) throws NumberFormatException {
+        try{
+            konto.abheben(betrag);
+        }catch(GesperrtException e){
+            meldung.setText("Konto gesperrt!");
+        }
     }
 }
