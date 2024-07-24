@@ -1,0 +1,9 @@
+.ueberschrift {
+    -fx-font-size: 25;
+    -fx-font-family: "Sans Serif";
+}
+
+.meldung {
+    -fx-font-size: 15;
+    -fx-fill: red;
+}

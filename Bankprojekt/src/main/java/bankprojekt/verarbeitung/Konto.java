@@ -55,7 +55,7 @@ public abstract class Konto implements Serializable, Comparable<Konto>
 	 * Property um den Kontostand weitergeben zu können
 	 * @return den aktuellen Kontostand
 	 */
-	public ReadOnlyDoubleProperty getKontostandProperty(){
+	public ReadOnlyDoubleProperty kontostandProperty(){
 		return kontostand.getReadOnlyProperty();
 	}
 
@@ -63,7 +63,7 @@ public abstract class Konto implements Serializable, Comparable<Konto>
 	 * gibt das gesperrt Property weiter
 	 * @return gersperrt
 	 */
-	public BooleanProperty getGesperrtProperty(){
+	public BooleanProperty gesperrtProperty(){
 		return gesperrt;
 	}
 

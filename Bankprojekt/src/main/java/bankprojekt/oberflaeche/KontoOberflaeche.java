@@ -93,8 +93,8 @@ public class KontoOberflaeche extends BorderPane {
 		anzeige.add(txtStand, 0, 1);
 		stand = new Text();
 		stand.setFont(new Font("Sans Serif", 15));
-		stand.textProperty().bind(Bindings.format("%.2f", konto.getKontostandProperty()));
-		stand.fillProperty().bind(Bindings.when(konto.getKontostandProperty().greaterThanOrEqualTo(0)).then(Color.GREEN).otherwise(Color.RED));
+		stand.textProperty().bind(Bindings.format("%.2f", konto.kontostandProperty()));
+		stand.fillProperty().bind(Bindings.when(konto.kontostandProperty().greaterThanOrEqualTo(0)).then(Color.GREEN).otherwise(Color.RED));
 		GridPane.setHalignment(stand, HPos.RIGHT);
 		anzeige.add(stand, 1, 1);
 		
@@ -102,7 +102,7 @@ public class KontoOberflaeche extends BorderPane {
 		txtGesperrt.setFont(new Font("Sans Serif", 15));
 		anzeige.add(txtGesperrt, 0, 2);
 		gesperrt = new CheckBox();
-		gesperrt.selectedProperty().bindBidirectional(konto.getGesperrtProperty());
+		gesperrt.selectedProperty().bindBidirectional(konto.gesperrtProperty());
 		gesperrt.setOnAction(event -> gesperrtAendern(konto));
 		GridPane.setHalignment(gesperrt, HPos.RIGHT);
 		anzeige.add(gesperrt, 1, 2);

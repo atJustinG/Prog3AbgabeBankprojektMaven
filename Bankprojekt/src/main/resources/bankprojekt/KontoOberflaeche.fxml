@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="bankprojekt.KontoController">
+    <top>
+        <Text text="Ein Konto verändern" styleClass="ueberschrift" BorderPane.alignment="CENTER"/>
+    </top>
+    <center>
+        <GridPane fx:id="anzeige" alignment="CENTER" hgap="10" vgap="10">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints valignment="CENTER"/>
+            </rowConstraints>
+            <Text text="Kontonummer:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <Text fx:id="nummer" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+            <Text text="Kontostand:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <Text fx:id="stand" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            <Text text="Gesperrt:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <CheckBox fx:id="gesperrt" GridPane.rowIndex="2" GridPane.columnIndex="1" onAction="#gesperrtAendern"/>
+            <Text text="Adresse:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <TextArea fx:id="adresse" GridPane.rowIndex="3" GridPane.columnIndex="1" prefColumnCount="25"
+                      prefRowCount="2"/>
+            <Text fx:id="meldung" GridPane.rowIndex="4" GridPane.columnIndex="0" GridPane.columnSpan="2"
+                  styleClass="meldung"/>
+        </GridPane>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER" spacing="10">
+            <TextField fx:id="betrag" text="100.00"/>
+            <Button text="Einzahlen" onAction="#einzahlen"/>
+            <Button text="Abheben" onAction="#abheben"/>
+        </HBox>
+    </bottom>
+</BorderPane>

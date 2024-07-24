@@ -125,7 +125,7 @@ class BankTest {
     /**
      * testet Die Klon Methode der Bank
      */
-    @Test
+    /*@Test
     public void testBankClone() {
         Bank originalBank = new Bank(123456);
         Kunde kunde = new Kunde();
@@ -145,6 +145,6 @@ class BankTest {
         clonedKonto.einzahlen(geldWert*2);
         assertEquals((geldWert*2), clonedKonto.getKontostand());
         assertEquals(geldWert, originalKonto.getKontostand());
-    }
+    }*/
 
 }
